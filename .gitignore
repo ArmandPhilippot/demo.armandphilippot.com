@@ -1,0 +1,10 @@
+# Dependencies
+**/node_modules/
+**/vendor/
+yarn-error*
+
+# Logs
+logs
+
+# Misc
+.vscode
