@@ -8,3 +8,8 @@ logs
 
 # Misc
 .vscode
+.eslintcache
+
+# Dotenv
+.env*
+!.env.example

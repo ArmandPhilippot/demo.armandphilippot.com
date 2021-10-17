@@ -19,7 +19,7 @@
     "lint:php": "composer lint",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
     "release": "standard-version -s",
-    "rtl": "rtlcss htdocs/style.css htdocs/style-rtl.css",
+    "rtl": "rtlcss htdocs/assets/css/style.css htdocs/assets/css/style-rtl.css",
     "serve": "webpack serve --node-env=development",
     "watch": "webpack --watch --progress --node-env=development"
   },
@@ -42,7 +42,7 @@
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^9.0.0",
     "imagemin-optipng": "^8.0.0",
-    "imagemin-svgo": "^10.0.0",
+    "imagemin-svgo": "^9.0.0",
     "lint-staged": "^11.2.3",
     "mini-css-extract-plugin": "^2.4.2",
     "npm-run-all": "^4.1.5",
