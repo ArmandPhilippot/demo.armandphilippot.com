@@ -1,0 +1,3 @@
+[submodule "htdocs/projects/js-small-apps"]
+	path = htdocs/projects/js-small-apps
+	url = git@github.com:ArmandPhilippot/js-small-apps.git
