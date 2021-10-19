@@ -51,6 +51,9 @@ module.exports = {
     ],
   },
   optimization: {
+    runtimeChunk: {
+      name: 'js/runtime',
+    },
     splitChunks: {
       cacheGroups: {
         style: {
