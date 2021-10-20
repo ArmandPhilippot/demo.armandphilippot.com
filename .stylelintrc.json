@@ -1,3 +1,26 @@
 {
-  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines"]
+  "extends": ["stylelint-config-standard", "stylelint-config-sass-guidelines"],
+  "rules": {
+    "at-rule-empty-line-before": [
+      "always",
+      {
+        "except": ["blockless-after-blockless"],
+        "ignore": ["after-comment", "first-nested"],
+        "ignoreAtRules": ["else", "if"]
+      }
+    ],
+    "block-closing-brace-newline-after": [
+      "always",
+      { "ignoreAtRules": ["if", "else"] }
+    ],
+    "max-nesting-depth": [
+      3,
+      {
+        "ignore": ["blockless-at-rules", "pseudo-classes"],
+        "ignoreAtRules": ["media", "supports", "include"]
+      }
+    ],
+    "string-quotes": "double",
+    "scss/dollar-variable-pattern": "^([a-z][a-z0-9]*)((-|_)[a-z0-9]+)*$"
+  }
 }
