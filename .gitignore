@@ -9,6 +9,7 @@ logs
 # Misc
 .vscode
 .eslintcache
+htdocs/assets/hmr
 
 # Dotenv
 .env*
