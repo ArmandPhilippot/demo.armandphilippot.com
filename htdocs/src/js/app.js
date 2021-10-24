@@ -1,5 +1,31 @@
 import projects from './config/projects';
-import { isStyleJsExists } from './utilities/helpers';
+import { isSmallVw, isStyleJsExists } from './utilities/helpers';
+
+/**
+ * Display or hide the toolbar depending on the current viewport width.
+ */
+function toggleToolbar() {
+  const toolbar = document.querySelector('.toolbar');
+  if (isSmallVw()) {
+    toolbar.style.display = '';
+  } else {
+    toolbar.style.display = 'none';
+  }
+}
+
+/**
+ * Change the visibility of some DOM elements.
+ */
+function updateView() {
+  toggleToolbar();
+}
+
+/**
+ * Update view when the window size changes.
+ */
+function listenWindowSize() {
+  window.addEventListener('resize', updateView);
+}
 
 /**
  * Create a list item for a project.
@@ -49,6 +75,8 @@ function loadWebpackStyles() {
 function init() {
   loadWebpackStyles();
   printProjectsNav();
+  updateView();
+  listenWindowSize();
 }
 
 init();
