@@ -2,6 +2,64 @@ import projects from './config/projects';
 import { isSmallVw, isStyleJsExists } from './utilities/helpers';
 
 /**
+ * Hide the header and footer.
+ * @param {HTMLElement} header - The header element.
+ * @param {HTMLElement} footer - The footer element.
+ */
+function hideHeaderFooter(header, footer) {
+  header.classList.remove('slide-in--left');
+  footer.classList.remove('slide-in--left');
+  header.classList.add('slide-out--left');
+  footer.classList.add('slide-out--left');
+  setTimeout(() => {
+    header.classList.add('hide');
+    footer.classList.add('hide');
+  }, 800);
+}
+
+/**
+ * Show the header and footer.
+ * @param {HTMLElement} header - The header element.
+ * @param {HTMLElement} footer - The footer element.
+ */
+function showHeaderFooter(header, footer) {
+  header.classList.remove('slide-out--left');
+  footer.classList.remove('slide-out--left');
+  header.classList.remove('hide');
+  footer.classList.remove('hide');
+  header.classList.add('slide-in--left');
+  footer.classList.add('slide-in--left');
+}
+
+/**
+ * Handle header and footer visibility.
+ * @returns {void}
+ */
+function toggleHeaderFooter() {
+  const header = document.querySelector('header');
+  const footer = document.querySelector('footer');
+
+  if (!isSmallVw()) {
+    showHeaderFooter(header, footer);
+    return;
+  }
+
+  if (header.classList.contains('hide')) {
+    showHeaderFooter(header, footer);
+  } else {
+    hideHeaderFooter(header, footer);
+  }
+}
+
+/**
+ * Add an event listener to show or hide header and footer.
+ */
+function listenMenuBtn() {
+  const menuBtn = document.querySelector('.btn--menu');
+  menuBtn.addEventListener('click', toggleHeaderFooter);
+}
+
+/**
  * Display or hide the toolbar depending on the current viewport width.
  */
 function toggleToolbar() {
@@ -18,6 +76,7 @@ function toggleToolbar() {
  */
 function updateView() {
   toggleToolbar();
+  toggleHeaderFooter();
 }
 
 /**
@@ -77,6 +136,7 @@ function init() {
   printProjectsNav();
   updateView();
   listenWindowSize();
+  listenMenuBtn();
 }
 
 init();
