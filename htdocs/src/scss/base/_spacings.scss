@@ -1,0 +1,17 @@
+@use "../abstracts/functions" as fun;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@include mix.set-vars(
+  (
+    spacing-3xs: var.$spacing_3xs,
+    spacing-2xs: var.$spacing_2xs,
+    spacing-xs: var.$spacing_xs,
+    spacing-sm: var.$spacing_sm,
+    spacing-md: var.$spacing_md,
+    spacing-lg: var.$spacing_lg,
+    spacing-xl: var.$spacing_xl,
+    spacing-2xl: var.$spacing_2xl,
+    spacing-3xl: var.$spacing_3xl,
+    toolbar-height: fun.convert-px(60),
+  )
+);

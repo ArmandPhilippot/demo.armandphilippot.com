@@ -1,0 +1,44 @@
+@use "../abstracts/functions" as fun;
+@use "../abstracts/mixins" as mix;
+
+.hide {
+  display: none;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  height: fun.convert-px(1);
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  width: fun.convert-px(1);
+  word-break: normal;
+  word-wrap: normal !important; /* Many screen reader and browser combinations announce broken words as they would appear visually. */
+
+  &:focus {
+    background: fun.get-var(color-bg);
+    border: fun.convert-px(3) solid fun.get-var(color-border);
+    box-shadow: 0 0 fun.convert-px(2) fun.convert-px(2)
+      fun.get-var(color-shadow-light);
+    clip: auto !important;
+    color: fun.get-var(color-primary);
+    display: block;
+    font-size: fun.get-var(font-size-md);
+    font-weight: 600;
+    height: auto;
+    left: 0;
+    padding: fun.get-var(spacing-sm) fun.get-var(spacing-md);
+    top: 0;
+    width: auto;
+    z-index: 100000;
+  }
+}
+
+@include mix.motion("reduce") {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

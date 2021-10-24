@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+@include mix.set-vars(
+  (
+    color-bg: #{var.$color_black-squeeze},
+    color-bg-opacity: #{var.$color_black-squeeze-opacity-80},
+    color-bg-secondary: #{var.$color_catskill-white},
+    color-bg-tertiary: #{var.$color_link-water},
+    color-fg: #{var.$color_firefly},
+    color-fg-inverted: #{var.$color_black-squeeze},
+    color-fg-secondary: #{var.$color_chathams-blue-dark},
+    color-fg-tertiary: #{var.$color_nile-blue},
+    color-border: #{var.$color_chathams-blue},
+    color-border-light: #{var.$color_geyser},
+    color-border-lighter: #{var.$color_link-water},
+    color-shadow-darker: #{var.$color_nile-blue},
+    color-shadow-dark: #{var.$color_pale-sky},
+    color-shadow: #{var.$color_chambray},
+    color-shadow-light: #{var.$color_gull-gray},
+    color-shadow-lighter: #{var.$color_geyser},
+    color-primary: #{var.$color_chathams-blue},
+    color-primary-light: #{var.$color_chathams-blue-light},
+    color-primary-light-opacity: #{var.$color_chathams-blue-light-opacity-25},
+    color-primary-dark: #{var.$color_chathams-blue-dark},
+    color-secondary: #{var.$color_russet},
+  )
+);

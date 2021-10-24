@@ -1,0 +1,44 @@
+@use "../abstracts/functions" as fun;
+@use "../abstracts/mixins" as mix;
+
+.body {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: minmax(0, 1fr) max-content;
+  height: 100vh;
+  position: relative;
+
+  @include mix.media("screen") {
+    @include mix.dimensions("lg") {
+      grid-template-columns: 1.5fr 4fr;
+    }
+
+    @include mix.dimensions("xl") {
+      grid-template-columns: 1fr 4fr;
+    }
+  }
+}
+
+.header {
+  grid-column: 1;
+  grid-row: 1;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.main {
+  grid-column: 1;
+  grid-row: 1 / -1;
+
+  @include mix.media("screen") {
+    @include mix.dimensions("lg") {
+      grid-column: 2;
+    }
+  }
+}
+
+.footer {
+  grid-column: 1;
+  grid-row: 2;
+  width: 100%;
+}

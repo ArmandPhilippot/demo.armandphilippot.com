@@ -1,0 +1,48 @@
+@use "../abstracts/functions" as fun;
+
+*::selection {
+  background: fun.get-var(color-primary-light-opacity);
+}
+
+body {
+  background: fun.get-var(color-bg-secondary);
+  color: fun.get-var(color-fg);
+  font-size: fun.get-var(font-size-md);
+  line-height: fun.get-var(line-height);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0 0 fun.get-var(spacing-sm);
+}
+
+a {
+  color: fun.get-var(color-primary);
+  text-decoration-thickness: fun.convert-px(2);
+  text-underline-offset: fun.convert-px(3);
+  transition: all 0.3s ease-in-out 0s;
+
+  &:hover,
+  &:focus {
+    color: fun.get-var(color-primary-light);
+    text-decoration-color: fun.get-var(color-primary-light);
+    text-decoration-thickness: fun.convert-px(4);
+  }
+
+  &:focus {
+    outline: fun.get-var(color-primary) dotted fun.convert-px(1);
+  }
+
+  &:active {
+    color: fun.get-var(color-primary-dark);
+    outline: none;
+    text-decoration-color: fun.get-var(color-primary-dark);
+    text-decoration-thickness: fun.convert-px(2);
+  }
+}

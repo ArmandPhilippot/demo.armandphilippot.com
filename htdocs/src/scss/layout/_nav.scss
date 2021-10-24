@@ -1,0 +1,64 @@
+@use "../abstracts/functions" as fun;
+@use "../abstracts/placeholders";
+
+.nav {
+  text-align: center;
+
+  &__label {
+    font-weight: 600;
+  }
+
+  &__list {
+    @extend %reset-list;
+
+    .btn {
+      width: 100%;
+    }
+  }
+
+  &__link {
+    &--back {
+      display: inline-block;
+      margin: fun.get-var(spacing-sm) 0;
+
+      &::before {
+        content: "\1F810";
+        display: inline-block;
+        text-decoration: none;
+      }
+    }
+
+    &--app {
+      background: fun.get-var(color-bg);
+      border: fun.convert-px(1) solid fun.get-var(color-border);
+      display: block;
+      padding: fun.get-var(spacing-2xs);
+      position: relative;
+      text-decoration: none;
+      transition: all 0.3s ease-in-out 0s;
+      width: 100%;
+
+      &:hover,
+      &:focus {
+        background: fun.get-var(color-primary);
+        color: fun.get-var(color-fg-inverted);
+      }
+
+      &:active {
+        background: fun.get-var(color-bg);
+        color: fun.get-var(color-primary-dark);
+        text-decoration: fun.convert-px(1) solid underline;
+      }
+    }
+  }
+
+  &__item:not(:first-child) & {
+    &__link {
+      border-top: 0;
+    }
+  }
+
+  .btn {
+    margin: auto;
+  }
+}

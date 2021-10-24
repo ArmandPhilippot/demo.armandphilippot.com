@@ -1,0 +1,21 @@
+@use "../abstracts/functions" as fun;
+
+.btn {
+  background: fun.get-var(color-bg);
+  border: 0;
+  color: fun.get-var(color-primary);
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background: fun.get-var(color-primary);
+    color: fun.get-var(color-fg-inverted);
+  }
+
+  &:active {
+    background: fun.get-var(color-bg);
+    color: fun.get-var(color-primary);
+  }
+}

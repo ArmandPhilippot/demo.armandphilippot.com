@@ -1,0 +1,117 @@
+@use "../abstracts/functions" as fun;
+@use "../abstracts/mixins" as mix;
+@use "../abstracts/variables" as var;
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/Kanit/Kanit-Bold.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: italic;
+  font-weight: 700;
+  src: url("../fonts/Kanit/Kanit-BoldItalic.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-BoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/Kanit/Kanit-SemiBold.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: italic;
+  font-weight: 600;
+  src: url("../fonts/Kanit/Kanit-SemiBoldItalic.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-SemiBoldItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Kanit/Kanit-Medium.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: italic;
+  font-weight: 500;
+  src: url("../fonts/Kanit/Kanit-MediumItalic.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-MediumItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/Kanit/Kanit-Regular.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: italic;
+  font-weight: 400;
+  src: url("../fonts/Kanit/Kanit-Italic.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-Italic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: normal;
+  font-weight: 300;
+  src: url("../fonts/Kanit/Kanit-Light.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-Light.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Kanit;
+  font-style: italic;
+  font-weight: 300;
+  src: url("../fonts/Kanit/Kanit-LightItalic.woff2") format("woff2"),
+    url("../fonts/Kanit/Kanit-LightItalic.woff") format("woff");
+}
+
+@font-face {
+  font-display: swap;
+  font-family: Inter;
+  font-style: oblique 0deg 10deg;
+  font-weight: 100 900;
+  src: url("../fonts/Inter/Inter.woff2?v=3.18") format("woff2");
+}
+
+@include mix.set-vars(
+  (
+    font-family-primary: #{var.$font-family_primary},
+    font-family-secondary: #{var.$font-family_secondary},
+    font-family-mono: #{var.$font-family_mono},
+    font-size-sm: #{var.$font-size_sm},
+    font-size-md: #{var.$font-size_md},
+    font-size-lg: #{var.$font-size_lg},
+    font-size-xl: #{var.$font-size_xl},
+    font-size-2xl: #{var.$font-size_2xl},
+    font-size-3xl: #{var.$font-size_3xl},
+    font-size-4xl: #{var.$font-size_4xl},
+    line-height: #{var.$line-height},
+  )
+);
