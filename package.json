@@ -16,7 +16,6 @@
     "fix:scss": "stylelint \"**/*.scss\" --fix",
     "lint": "npm-run-all --parallel lint:*",
     "lint:js": "eslint --ext .js,.jsx",
-    "lint:php": "composer lint",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
     "release": "standard-version -s",
     "rtl": "rtlcss htdocs/assets/css/style.css htdocs/assets/css/style-rtl.css",
