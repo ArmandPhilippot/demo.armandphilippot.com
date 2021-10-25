@@ -15,3 +15,13 @@
     toolbar-height: fun.convert-px(60),
   )
 );
+
+@include mix.media("screen") {
+  @include mix.dimensions("lg") {
+    @include mix.set-vars(
+      (
+        toolbar-height: fun.convert-px(0),
+      )
+    );
+  }
+}

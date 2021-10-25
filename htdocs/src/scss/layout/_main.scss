@@ -35,7 +35,7 @@
 
 .project-preview {
   background: fun.get-var(color-bg);
-  flex: 1;
+  flex: 0 1 calc(100% - #{fun.get-var(toolbar-height)});
   width: 100%;
 
   @include mix.media("screen") {

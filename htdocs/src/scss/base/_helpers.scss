@@ -2,7 +2,7 @@
 @use "../abstracts/mixins" as mix;
 
 .hide {
-  display: none;
+  display: none !important;
 }
 
 /* Text meant only for screen readers. */

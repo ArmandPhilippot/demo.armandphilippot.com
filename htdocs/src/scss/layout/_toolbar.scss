@@ -13,6 +13,7 @@
   left: 0;
   position: absolute;
   right: 0;
+  z-index: 2;
 
   & > &__options {
     background: fun.get-var(color-primary);
