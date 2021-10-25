@@ -88,12 +88,12 @@ function listenMenuBtn() {
  */
 function toggleProjectDetailsBtn() {
   const button = document.querySelector('.btn--details');
-  const currentPath = window.location.pathname;
+  const currentPath = window.location.hash;
 
-  if (currentPath === '/') {
-    button.style.display = 'none';
-  } else {
+  if (currentPath) {
     button.style.display = '';
+  } else {
+    button.style.display = 'none';
   }
 }
 
@@ -255,9 +255,8 @@ function getProjectPreview(projectPath) {
 /**
  * Display the targeted project.
  * @param {String} id - The project id.
- * @param {String} href - The project URL.
  */
-function showProject(id, href) {
+function showProject(id) {
   const currentProject = getCurrentProject(id);
   const main = document.querySelector('.main');
   const details = getProjectDetails(currentProject);
@@ -268,7 +267,7 @@ function showProject(id, href) {
 
   detailsBtn.textContent = `About ${currentProject.name}`;
   detailsBtn.addEventListener('click', toggleProjectDetails);
-  window.history.pushState({}, currentProject.name, href);
+  window.history.pushState({}, currentProject.name, `#${id}`);
   main.replaceChildren(preview, details);
 }
 
@@ -282,12 +281,12 @@ function getProjectsNavItem(id, name) {
   const item = document.createElement('li');
   const link = document.createElement('a');
   link.classList.add('nav__link', 'nav__link--app');
-  link.href = id;
+  link.href = `#${id}`;
   link.id = id;
   link.textContent = name;
   link.addEventListener('click', (e) => {
     e.preventDefault();
-    showProject(id, e.target.href);
+    showProject(id);
     toggleProjectDetailsBtn();
     if (isSmallVw()) toggleHeaderFooter();
   });
@@ -321,6 +320,18 @@ function loadWebpackStyles() {
 }
 
 /**
+ * Load corresponding project if the requested page contains a hash.
+ */
+function printRequestedPage() {
+  const currentPath = window.location.hash;
+
+  if (currentPath) {
+    const id = currentPath.replace('#', '');
+    showProject(id);
+  }
+}
+
+/**
  * Initialize the website with the projects list.
  */
 function init() {
@@ -329,6 +340,7 @@ function init() {
   updateView();
   listenWindowSize();
   listenMenuBtn();
+  printRequestedPage();
 }
 
 init();
