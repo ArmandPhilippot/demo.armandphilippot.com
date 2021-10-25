@@ -84,6 +84,20 @@ function listenMenuBtn() {
 }
 
 /**
+ * Show or hide the project details button depending on current location.
+ */
+function toggleProjectDetailsBtn() {
+  const button = document.querySelector('.btn--details');
+  const currentPath = window.location.pathname;
+
+  if (currentPath === '/') {
+    button.style.display = 'none';
+  } else {
+    button.style.display = '';
+  }
+}
+
+/**
  * Update the visibility of some DOM elements depending on viewport.
  */
 function updateView() {
@@ -105,6 +119,8 @@ function updateView() {
     details?.classList.remove('hide');
     details?.classList.add('fade-in');
   }
+
+  toggleProjectDetailsBtn();
 }
 
 /**
@@ -272,6 +288,7 @@ function getProjectsNavItem(id, name) {
   link.addEventListener('click', (e) => {
     e.preventDefault();
     showProject(id, e.target.href);
+    toggleProjectDetailsBtn();
     if (isSmallVw()) toggleHeaderFooter();
   });
   item.classList.add('nav__item');
