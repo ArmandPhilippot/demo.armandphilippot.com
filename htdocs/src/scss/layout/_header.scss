@@ -3,8 +3,11 @@
 
 .header {
   background: fun.get-var(color-bg-secondary);
+  overflow-y: auto;
   padding: fun.get-var(spacing-md)
     clamp(#{fun.get-var(spacing-md)}, 3vw, #{fun.get-var(spacing-lg)});
+  scrollbar-color: fun.get-var(color-primary-light-opacity)
+    fun.get-var(color-bg-tertiary);
   z-index: 5;
 
   @include mix.media("screen") {
