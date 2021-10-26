@@ -2,7 +2,10 @@ const projects = [
   {
     id: 'bin2dec',
     name: 'Bin2Dec',
-    description: 'Convert a binary string to a decimal number.',
+    description: {
+      en: 'Convert a binary string to a decimal number.',
+      fr: 'Convertit un nombre binaire en un nombre décimal.',
+    },
     path: './projects/js-small-apps/bin2dec/index.html',
     repo: [
       {
@@ -19,8 +22,10 @@ const projects = [
   {
     id: 'budget-app',
     name: 'Budget App',
-    description:
-      'By selecting a language in the initialization form, only the currency is converted (the app is not translated). Also, no data is saved on reload.',
+    description: {
+      en: 'By selecting a language in the initialization form, only the currency is converted (the app is not translated). Also, no data is saved on page reload.',
+      fr: "En sélectionnant une langue dans le formulaire d'initialisation, seul le format des nombres change (l'application n'est pas traduite). Aucune donnée n'est conservée après rechargement de la page.",
+    },
     path: './projects/js-small-apps/budget-app/index.html',
     repo: [
       {
@@ -37,7 +42,10 @@ const projects = [
   {
     id: 'calculator',
     name: 'Calculator',
-    description: 'A basic calculator.',
+    description: {
+      en: 'A basic calculator.',
+      fr: 'Une simple calculette.',
+    },
     path: './projects/js-small-apps/calculator/index.html',
     repo: [
       {
@@ -54,8 +62,10 @@ const projects = [
   {
     id: 'clock',
     name: 'Clock',
-    description:
-      'What time is it? You can have the current hour in three formats: an analogic clock, a numeric display or a text.',
+    description: {
+      en: 'What time is it? You can have the current hour in three formats: an analogic clock, a numeric display or a text.',
+      fr: "Quelle heure est-il ? Vous pouvez voir l'heure actuelle dans trois formats : une horloge analogique, un affichage numérique et sous forme de texte.",
+    },
     path: './projects/js-small-apps/clock/index.html',
     repo: [
       {
@@ -72,8 +82,10 @@ const projects = [
   {
     id: 'css-border-previewer',
     name: 'CSS Border Previewer',
-    description:
-      'Play with CSS borders (style, width, border-radius). Then, you can copy the generated code if the preview suits you.',
+    description: {
+      en: 'Play with CSS borders (style, width, radius). Then, you can copy the generated code if the preview suits you.',
+      fr: "Jouez avec les bordures CSS (style, largeur, radius). Puis, vous pouvez copier le code généré si l'aperçu vous satisfait.",
+    },
     path: './projects/js-small-apps/css-border-previewer/index.html',
     repo: [
       {
@@ -90,8 +102,10 @@ const projects = [
   {
     id: 'rps-game',
     name: 'Rock Paper Scissors',
-    description:
-      'A basic implementation of the game. Try to beat your friend or the computer.',
+    description: {
+      en: 'A basic implementation of the game. Try to beat your friend or the computer.',
+      fr: "Une implémentation du jeu. Essayez de battre votre ami ou l'ordinateur.",
+    },
     path: './projects/js-small-apps/rock-paper-scissors/index.html',
     repo: [
       {

@@ -1,4 +1,5 @@
 import projects from './config/projects';
+import { translate, setLocale, currentLocale } from './i18n/i18n';
 import {
   hideToBottom,
   hideToLeft,
@@ -134,7 +135,7 @@ function getRepos(repos) {
   const list = document.createElement('ul');
   const items = repos.map((repo) => getRepoItem(repo.name, repo.url));
   title.classList.add('project-details__title');
-  title.textContent = 'Repositories:';
+  title.textContent = translate('main.project.details.repo');
   list.classList.add('list', 'list--repos');
   list.append(...items);
   wrapper.append(title, list);
@@ -151,7 +152,7 @@ function getTechs(technologies) {
 
   const title = document.createElement('h3');
   title.classList.add('project-details__title');
-  title.textContent = 'Technologies:';
+  title.textContent = translate('main.project.details.tech');
   const list = document.createElement('ul');
   const items = technologies.map((technology) => {
     const item = document.createElement('li');
@@ -173,17 +174,20 @@ function getProjectDetails(project) {
   const title = document.createElement('h2');
   const techList = project?.technologies ? getTechs(project.technologies) : [];
   const reposList = getRepos(project.repo);
+  const locale = currentLocale();
   let description;
 
   if (project.description) {
     description = document.createElement('p');
-    description.textContent = project.description;
+    description.textContent = project.description[locale] || '';
   } else {
     description = '';
   }
 
   title.classList.add('project-details__title');
-  title.textContent = `About ${project.name}`;
+  title.textContent = translate('main.project.details.about', {
+    name: project.name,
+  });
   details.classList.add('project-details');
   if (!isSmallVw()) details.classList.add('fade-in');
   details.replaceChildren(title, description, ...techList, ...reposList);
@@ -228,7 +232,9 @@ function showProject(id) {
 
   if (isSmallVw()) details.classList.add('hide');
 
-  detailsBtn.textContent = `About ${currentProject.name}`;
+  detailsBtn.textContent = translate('main.project.details.about', {
+    name: currentProject.name,
+  });
   detailsBtn.addEventListener('click', toggleProjectDetails);
   window.history.pushState({}, currentProject.name, `#${id}`);
   main.replaceChildren(preview, details);
@@ -311,10 +317,21 @@ function printRequestedPage() {
   }
 }
 
+function translateHTMLContent() {
+  const brandingDesc = document.querySelector('.branding__description');
+  const navLabel = document.querySelector('.nav__label');
+  const license = document.querySelector('.copyright__license');
+  brandingDesc.textContent = translate('branding.description');
+  navLabel.textContent = translate('nav.title');
+  license.title = translate('footer.license');
+}
+
 /**
  * Initialize the website with the projects list.
  */
 function init() {
+  setLocale('en');
+  translateHTMLContent();
   loadWebpackStyles();
   printProjectsNav();
   updateView();
