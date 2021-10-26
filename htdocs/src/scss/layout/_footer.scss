@@ -3,11 +3,13 @@
 
 .footer {
   background: fun.get-var(color-bg-secondary);
+  border-top: fun.convert-px(1) solid fun.get-var(color-border-light);
   padding: fun.get-var(spacing-sm) fun.get-var(spacing-md)
     calc(#{fun.get-var(toolbar-height)} + #{fun.get-var(spacing-sm)});
 
   @include mix.media("screen") {
     @include mix.dimensions("lg") {
+      box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow);
       padding: fun.get-var(spacing-sm) fun.get-var(spacing-md);
     }
   }

@@ -1,21 +1,32 @@
 @use "../abstracts/functions" as fun;
+@use "../abstracts/mixins" as mix;
 
 .header {
   background: fun.get-var(color-bg-secondary);
   padding: fun.get-var(spacing-md)
     clamp(#{fun.get-var(spacing-md)}, 3vw, #{fun.get-var(spacing-lg)});
   z-index: 5;
+
+  @include mix.media("screen") {
+    @include mix.dimensions("lg") {
+      box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow);
+    }
+  }
 }
 
 .branding {
-  margin-bottom: fun.get-var(spacing-sm);
+  margin-bottom: clamp(
+    #{fun.get-var(spacing-sm)},
+    3vw,
+    #{fun.get-var(spacing-md)}
+  );
   text-align: center;
 
   &__title {
     font-family: fun.get-var(font-family-secondary);
-    font-size: fun.get-var(font-size-3xl);
+    font-size: fun.get-var(font-size-2xl);
     font-weight: 500;
-    margin: fun.get-var(spacing-xs) 0;
+    margin: fun.get-var(spacing-xs) 0 fun.get-var(spacing-3xs);
   }
 
   &__link {
@@ -71,10 +82,10 @@
 
   &__link {
     display: block;
-    height: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(90)});
+    height: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(85)});
     transform-style: preserve-3d;
     transition: all 0.6s linear 0s;
-    width: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(90)});
+    width: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(85)});
 
     &:hover,
     &:focus {
