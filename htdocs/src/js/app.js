@@ -185,6 +185,7 @@ function getProjectDetails(project) {
   title.classList.add('project-details__title');
   title.textContent = `About ${project.name}`;
   details.classList.add('project-details');
+  if (!isSmallVw()) details.classList.add('fade-in');
   details.replaceChildren(title, description, ...techList, ...reposList);
 
   return details;
