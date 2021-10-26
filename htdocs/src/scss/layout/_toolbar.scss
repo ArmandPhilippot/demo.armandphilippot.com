@@ -4,6 +4,7 @@
   align-items: center;
   background: fun.get-var(color-primary);
   bottom: 0;
+  box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow-dark);
   color: fun.get-var(color-fg-inverted);
   display: flex;
   flex-flow: row wrap;
