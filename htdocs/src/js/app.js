@@ -234,21 +234,37 @@ function showProject(id) {
 }
 
 /**
+ * Add a CSS class to the current project in projects nav.
+ * @param {String} id - The project id.
+ */
+function setSelectedProject(id) {
+  const links = document.querySelectorAll('.nav__link');
+  links.forEach((link) => {
+    if (link.id === id) {
+      link.classList.add('nav__link--selected');
+    } else {
+      link.classList.remove('nav__link--selected');
+    }
+  });
+}
+
+/**
  * Create a list item for a project.
- * @param {Integer} id - The project id.
+ * @param {String} id - The project id.
  * @param {String} name - The project name.
  * @returns {HTMLElement} The list item.
  */
 function getProjectsNavItem(id, name) {
   const item = document.createElement('li');
   const link = document.createElement('a');
-  link.classList.add('nav__link', 'nav__link--app');
+  link.classList.add('nav__link');
   link.href = `#${id}`;
   link.id = id;
   link.textContent = name;
   link.addEventListener('click', (e) => {
     e.preventDefault();
     showProject(id);
+    setSelectedProject(id);
     toggleProjectDetailsBtn();
     if (isSmallVw()) toggleHeaderFooter();
   });
@@ -290,6 +306,7 @@ function printRequestedPage() {
   if (currentPath) {
     const id = currentPath.replace('#', '');
     showProject(id);
+    setSelectedProject(id);
   }
 }
 

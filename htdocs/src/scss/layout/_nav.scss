@@ -51,6 +51,17 @@
       color: fun.get-var(color-primary-dark);
       text-decoration: fun.convert-px(1) solid underline;
     }
+
+    &--selected {
+      background: fun.get-var(color-primary-dark);
+      box-shadow: inset 0 0 0 4px fun.get-var(color-bg);
+      color: fun.get-var(color-fg-inverted);
+
+      &:hover,
+      &:focus {
+        background: fun.get-var(color-primary-light);
+      }
+    }
   }
 
   .btn {
