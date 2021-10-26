@@ -10,6 +10,7 @@ module.exports = {
   },
   rules: {
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'object-curly-newline': 'off',
     'operator-linebreak': [
       'error',
       'after',
