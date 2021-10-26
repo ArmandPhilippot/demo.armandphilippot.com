@@ -9,6 +9,10 @@ const projects = [
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/bin2dec',
       },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/bin2dec',
+      },
     ],
     technologies: ['Vanilla Javascript'],
   },
@@ -23,6 +27,10 @@ const projects = [
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/budget-app',
       },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/budget-app',
+      },
     ],
     technologies: ['Vanilla Javascript'],
   },
@@ -35,6 +43,10 @@ const projects = [
       {
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/calculator',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/calculator',
       },
     ],
     technologies: ['Vanilla Javascript'],
@@ -50,6 +62,10 @@ const projects = [
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/clock',
       },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/clock',
+      },
     ],
     technologies: ['Vanilla Javascript', 'SVG'],
   },
@@ -64,6 +80,10 @@ const projects = [
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/css-border-previewer',
       },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/css-border-previewer',
+      },
     ],
     technologies: ['Vanilla Javascript'],
   },
@@ -77,6 +97,10 @@ const projects = [
       {
         name: 'Github',
         url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/rock-paper-scissors',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/rock-paper-scissors',
       },
     ],
     technologies: ['Vanilla Javascript'],
