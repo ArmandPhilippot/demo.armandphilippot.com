@@ -58,17 +58,6 @@ $font-family_primary: ("Inter", "Liberation Sans", Arial, sans-serif);
 /// @type List
 $font-family_secondary: ("Kanit", "Liberation Sans", Arial, sans-serif);
 
-/// Monospace font family
-/// @type List
-$font-family_mono: (
-  "Cousine",
-  "Liberation Mono",
-  "DejaVu Sans Mono",
-  "Courier New",
-  monospace
-);
-/* stylelint-enable */
-
 $line-height: get-ratio("golden-number");
 
 $font-size_base: 16px;
@@ -79,9 +68,6 @@ $font-size_md: $font-size_base-rem * math.pow($font-size_ratio, 0);
 $font-size_lg: $font-size_base-rem * math.pow($font-size_ratio, 1);
 $font-size_xl: $font-size_base-rem * math.pow($font-size_ratio, 2);
 $font-size_2xl: $font-size_base-rem * math.pow($font-size_ratio, 3);
-$font-size_3xl: $font-size_base-rem * math.pow($font-size_ratio, 4);
-$font-size_4xl: $font-size_base-rem * math.pow($font-size_ratio, 5);
-$font-size_5xl: $font-size_base-rem * math.pow($font-size_ratio, 6);
 
 //============================================================================
 // Spacings
@@ -96,42 +82,21 @@ $spacing_xs: math.div($spacing_base, 2);
 $spacing_sm: math.div($spacing_base, 1.5);
 $spacing_md: $spacing_base;
 $spacing_lg: $spacing_base * 1.5;
-$spacing_xl: $spacing_base * 2;
-$spacing_2xl: $spacing_base * 3;
-$spacing_3xl: $spacing_base * 4;
 
 //============================================================================
 // Colors
 //============================================================================
 
 $color_black-squeeze: hsl(212, 55%, 97%);
-$color_black-squeeze-opacity-80: hsla(212, 55%, 97%, 0.8);
 $color_catskill-white: hsl(212, 53%, 92%);
 $color_link-water: hsl(212, 51%, 87%);
 $color_geyser: hsl(212, 27%, 83%);
 $color_gull-gray: hsl(212, 15%, 66%);
-$color_gull-gray-opacity: hsla(212, 15%, 66%, 0.55);
 $color_pale-sky: hsl(212, 13%, 46%);
-$color_fiord: hsl(212, 29%, 35%);
-$color_rhino: hsl(212, 33%, 28%);
-$color_cloud-burst: hsl(211, 36%, 12%);
-$color_mirage: hsl(211, 36%, 14%);
 $color_nile-blue: hsl(212, 47%, 19%);
-$color_big-stone: hsl(212, 45%, 15%);
 $color_firefly: hsl(212, 45%, 11%);
-$color_firefly-opacity-80: hsla(212, 45%, 11%, 0.8);
 $color_chambray: hsl(212, 45%, 40%);
 $color_chathams-blue: hsl(212, 65%, 28%);
 $color_chathams-blue-light: hsl(212, 90%, 30%);
 $color_chathams-blue-light-opacity-25: hsla(212, 90%, 30%, 0.25);
 $color_chathams-blue-dark: hsl(212, 70%, 25%);
-$color_russet: hsl(23, 65%, 31%);
-$color_russet-opacity-25: hsla(23, 65%, 31%, 0.25);
-$color_horizon: hsl(213, 30%, 54%);
-$color_kashmir-blue: hsl(212, 30%, 46%);
-$color_spindle: hsl(212, 56%, 75%);
-$color_spindle-light: hsl(212, 52%, 78%);
-$color_spindle-light-opacity-35: hsla(212, 52%, 78%, 0.35);
-$color_spindle-dark: hsl(213, 60%, 72%);
-$color_brandy: hsl(37, 51%, 74%);
-$color_brandy-opacity-40: hsla(37, 51%, 74%, 0.4);
