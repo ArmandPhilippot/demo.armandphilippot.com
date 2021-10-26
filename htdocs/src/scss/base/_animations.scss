@@ -44,7 +44,7 @@
 
 @keyframes slideInUp {
   0% {
-    margin-bottom: -100%;
+    margin-bottom: -100vh;
   }
 
   100% {
@@ -59,7 +59,7 @@
   }
 
   100% {
-    margin-bottom: -100%;
+    margin-bottom: -100vh;
     visibility: hidden;
   }
 }
@@ -81,9 +81,9 @@
 }
 
 .slide-in--up {
-  animation: slideInUp 0.8s;
+  animation: slideInUp 1s;
 }
 
 .slide-out--bottom {
-  animation: slideOutBottom 0.8s;
+  animation: slideOutBottom 1s;
 }

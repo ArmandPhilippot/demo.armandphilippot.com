@@ -5,6 +5,7 @@
 .main {
   display: flex;
   flex-flow: column nowrap;
+  height: calc(100% - #{fun.get-var(toolbar-height)});
 
   @include mix.media("screen") {
     @include mix.dimensions("lg") {
@@ -35,7 +36,8 @@
 
 .project-preview {
   background: fun.get-var(color-bg);
-  flex: 0 1 calc(100% - #{fun.get-var(toolbar-height)});
+  flex: 0 1 100%;
+  min-height: 0;
   width: 100%;
 
   @include mix.media("screen") {
@@ -54,11 +56,8 @@
 .project-details {
   background: fun.get-var(color-bg-secondary);
   box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow);
-  display: flex;
-  flex-flow: column nowrap;
-  font-size: fun.get-var(font-size-sm);
-  padding: fun.get-var(spacing-md) fun.get-var(spacing-md)
-    calc(#{fun.get-var(toolbar-height)} + #{fun.get-var(spacing-md)});
+  flex: 1 0 100%;
+  padding: fun.get-var(spacing-md);
 
   @include mix.media("screen") {
     @include mix.dimensions("lg") {
