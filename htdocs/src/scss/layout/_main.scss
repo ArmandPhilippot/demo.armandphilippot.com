@@ -57,7 +57,10 @@
   background: fun.get-var(color-bg-secondary);
   box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow);
   flex: 1 0 100%;
+  overflow-y: auto;
   padding: fun.get-var(spacing-md);
+  scrollbar-color: fun.get-var(color-primary-light-opacity)
+    fun.get-var(color-bg-tertiary);
 
   @include mix.media("screen") {
     @include mix.dimensions("lg") {
