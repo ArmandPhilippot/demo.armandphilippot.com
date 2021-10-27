@@ -64,7 +64,7 @@ const projects = [
     name: 'Clock',
     description: {
       en: 'What time is it? You can have the current hour in three formats: an analogic clock, a numeric display or a text.',
-      fr: "Quelle heure est-il ? Vous pouvez voir l'heure actuelle dans trois formats : une horloge analogique, un affichage numérique et sous forme de texte.",
+      fr: "Quelle heure est-il ? Vous pouvez voir l'heure actuelle dans trois formats différents : une horloge analogique, un affichage numérique et sous forme de texte.",
     },
     path: './projects/js-small-apps/clock/index.html',
     repo: [
@@ -84,7 +84,7 @@ const projects = [
     name: 'CSS Border Previewer',
     description: {
       en: 'Play with CSS borders (style, width, radius). Then, you can copy the generated code if the preview suits you.',
-      fr: "Jouez avec les bordures CSS (style, largeur, radius). Puis, vous pouvez copier le code généré si l'aperçu vous satisfait.",
+      fr: "Jouez avec les bordures CSS (style, largeur, radius). Ensuite, vous pouvez copier le code généré si l'aperçu vous satisfait.",
     },
     path: './projects/js-small-apps/css-border-previewer/index.html',
     repo: [
@@ -123,10 +123,10 @@ const projects = [
     id: 'notebook',
     name: 'Notebook',
     description: {
-      en: 'Create as many pages as you want and fill them. You can define a title and a body, then you can easily navigate between your pages with the nav.',
-      fr: 'Créez autant de pages que vous le souhaitez et remplissez-les. Vous pouvez définir une titre et un corps de texte, puis vous pouvez facilement naviguer entre vos pages grâce à la navigation.',
+      en: 'Create as many pages as you want and fill them. You can define a title and a body. Then you can easily navigate between your pages with the nav.',
+      fr: 'Créez autant de pages que vous le souhaitez et remplissez-les. Vous pouvez définir un titre et un corps de texte. Ensuite, vous pouvez facilement naviguer entre vos pages grâce à la navigation.',
     },
-    path: './projects/react-small-apps/notebook/build/index.html',
+    path: './projects/react-small-apps/notebook/build/',
     repo: [
       {
         name: 'Github',
@@ -166,7 +166,7 @@ const projects = [
       en: 'You can add, remove or mark as done your todos. For each todos, you can add some details in addition to the title.',
       fr: 'Vous pouvez ajouter, supprimer ou marquer comme fait vos "todo". Pour chaque "todo", vous pouvez ajouter des détails en plus du titre.',
     },
-    path: './projects/react-small-apps/todos/build/index.html',
+    path: './projects/react-small-apps/todos/build/',
     repo: [
       {
         name: 'Github',
