@@ -100,6 +100,46 @@ const projects = [
     technologies: ['Vanilla Javascript'],
   },
   {
+    id: 'meme-generator',
+    name: 'Meme Generator',
+    description: {
+      en: 'Choose a random image, set one or more texts then position them. Your meme is ready!',
+      fr: 'Choisissez une image aléatoire, définissez un ou plusieurs textes et positionnez-les. Votre meme est prêt !',
+    },
+    path: './projects/react-small-apps/meme-generator/build/index.html',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/meme-generator',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/meme-generator',
+      },
+    ],
+    technologies: ['React', 'Fetch'],
+  },
+  {
+    id: 'notebook',
+    name: 'Notebook',
+    description: {
+      en: 'Create as many pages as you want and fill them. You can define a title and a body, then you can easily navigate between your pages with the nav.',
+      fr: 'Créez autant de pages que vous le souhaitez et remplissez-les. Vous pouvez définir une titre et un corps de texte, puis vous pouvez facilement naviguer entre vos pages grâce à la navigation.',
+    },
+    path: './projects/react-small-apps/notebook/build/index.html',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/notebook',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/notebook',
+      },
+    ],
+    technologies: ['React', 'React router'],
+  },
+  {
     id: 'rps-game',
     name: 'Rock Paper Scissors',
     description: {
@@ -118,6 +158,26 @@ const projects = [
       },
     ],
     technologies: ['Vanilla Javascript'],
+  },
+  {
+    id: 'todos',
+    name: 'Todos',
+    description: {
+      en: 'You can add, remove or mark as done your todos. For each todos, you can add some details in addition to the title.',
+      fr: 'Vous pouvez ajouter, supprimer ou marquer comme fait vos "todo". Pour chaque "todo", vous pouvez ajouter des détails en plus du titre.',
+    },
+    path: './projects/react-small-apps/todos/build/index.html',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/todos',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/todos',
+      },
+    ],
+    technologies: ['React', 'React router', 'Redux'],
   },
 ];
 
