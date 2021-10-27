@@ -68,6 +68,7 @@ $font-size_md: $font-size_base-rem * math.pow($font-size_ratio, 0);
 $font-size_lg: $font-size_base-rem * math.pow($font-size_ratio, 1);
 $font-size_xl: $font-size_base-rem * math.pow($font-size_ratio, 2);
 $font-size_2xl: $font-size_base-rem * math.pow($font-size_ratio, 3);
+$font-size_3xl: $font-size_base-rem * math.pow($font-size_ratio, 4);
 
 //============================================================================
 // Spacings

@@ -27,7 +27,11 @@
 
   &__title {
     font-family: fun.get-var(font-family-secondary);
-    font-size: fun.get-var(font-size-2xl);
+    font-size: clamp(
+      #{fun.get-var(font-size-2xl)},
+      5vw,
+      #{fun.get-var(font-size-3xl)}
+    );
     font-weight: 500;
     margin: fun.get-var(spacing-xs) 0 fun.get-var(spacing-3xs);
   }
@@ -54,7 +58,11 @@
 
   &__description {
     font-family: fun.get-var(font-family-secondary);
-    font-size: fun.get-var(font-size-md);
+    font-size: clamp(
+      #{fun.get-var(font-size-md)},
+      3vw,
+      #{fun.get-var(font-size-lg)}
+    );
     font-weight: 400;
     letter-spacing: fun.convert-px(1);
     margin: 0;
@@ -85,10 +93,10 @@
 
   &__link {
     display: block;
-    height: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(85)});
+    height: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(90)});
     transform-style: preserve-3d;
     transition: all 0.6s linear 0s;
-    width: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(85)});
+    width: clamp(#{fun.convert-px(75)}, 15vmin, #{fun.convert-px(90)});
 
     &:hover,
     &:focus {
