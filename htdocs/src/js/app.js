@@ -1,5 +1,10 @@
 import projects from './config/projects';
-import { translate, setLocale, currentLocale } from './i18n/i18n';
+import {
+  translate,
+  setLocale,
+  currentLocale,
+  supportedLanguages,
+} from './i18n/i18n';
 import {
   hideToBottom,
   hideToLeft,
@@ -327,10 +332,23 @@ function translateHTMLContent() {
 }
 
 /**
+ * Translate the website according to the user preferred language.
+ */
+function setAppLocale() {
+  const preferredLanguage = navigator.language;
+  const supportedLanguage = supportedLanguages.find(
+    (lang) => preferredLanguage.startsWith(lang.code)
+    // eslint-disable-next-line function-paren-newline -- Conflict with Prettier
+  );
+  const locale = supportedLanguage.code || 'en';
+  setLocale(locale);
+}
+
+/**
  * Initialize the website with the projects list.
  */
 function init() {
-  setLocale('en');
+  setAppLocale();
   translateHTMLContent();
   loadWebpackStyles();
   printProjectsNav();
