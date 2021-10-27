@@ -7,11 +7,12 @@
   box-shadow: 0 -1px 2px 0 fun.get-var(color-shadow-dark);
   color: fun.get-var(color-fg-inverted);
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   gap: fun.get-var(spacing-xs);
   height: fun.get-var(toolbar-height);
   justify-content: center;
   left: 0;
+  padding: 0 fun.get-var(spacing-sm);
   position: absolute;
   right: 0;
   z-index: 2;
@@ -21,7 +22,8 @@
     color: fun.get-var(color-fg-inverted);
     font-size: fun.get-var(font-size-sm);
     height: 85%;
-    padding: 0 fun.get-var(spacing-sm);
+    line-height: inherit;
+    padding: 0 fun.get-var(spacing-xs);
 
     &:hover,
     &:focus {
