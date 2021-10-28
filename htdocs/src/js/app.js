@@ -140,7 +140,9 @@ function getRepos(repos) {
   const list = document.createElement('ul');
   const items = repos.map((repo) => getRepoItem(repo.name, repo.url));
   title.classList.add('project-details__title');
-  title.textContent = translate('main.project.details.repo');
+  title.textContent = translate('main.project.details.repo', {
+    count: repos.length,
+  });
   list.classList.add('list', 'list--repos');
   list.append(...items);
   wrapper.append(title, list);
@@ -157,7 +159,9 @@ function getTechs(technologies) {
 
   const title = document.createElement('h3');
   title.classList.add('project-details__title');
-  title.textContent = translate('main.project.details.tech');
+  title.textContent = translate('main.project.details.tech', {
+    count: technologies.length,
+  });
   const list = document.createElement('ul');
   const items = technologies.map((technology) => {
     const item = document.createElement('li');

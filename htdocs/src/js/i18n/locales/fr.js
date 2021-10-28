@@ -11,8 +11,16 @@ const fr = {
     project: {
       details: {
         about: 'À propos de {{name}}',
-        repo: 'Dépôts :',
-        tech: 'Technologies :',
+        repo: {
+          one: 'Dépôt :',
+          other: 'Dépôts :',
+          zero: 'Dépôt :',
+        },
+        tech: {
+          one: 'Technologie :',
+          other: 'Technologies :',
+          zero: 'Technologie :',
+        },
       },
     },
   },

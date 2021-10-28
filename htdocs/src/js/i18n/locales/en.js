@@ -11,8 +11,16 @@ const en = {
     project: {
       details: {
         about: 'About {{name}}',
-        repo: 'Repositories:',
-        tech: 'Technologies:',
+        repo: {
+          one: 'Repository:',
+          other: 'Repositories:',
+          zero: 'Repositories:',
+        },
+        tech: {
+          one: 'Technology:',
+          other: 'Technologies:',
+          zero: 'Technologies:',
+        },
       },
     },
   },
