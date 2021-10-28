@@ -345,7 +345,7 @@ function setAppLocale() {
     (lang) => preferredLanguage.startsWith(lang.code)
     // eslint-disable-next-line function-paren-newline -- Conflict with Prettier
   );
-  const locale = supportedLanguage.code || 'en';
+  const locale = supportedLanguage?.code || 'en';
   setLocale(locale);
 }
 
