@@ -7,7 +7,7 @@ const en = {
   },
   main: {
     instructions:
-      'Select an app inside menu to see a live preview and app details.',
+      'Select an app inside menu to see a live preview and app details (description, technologies, repositories).',
     project: {
       details: {
         about: 'About {{name}}',

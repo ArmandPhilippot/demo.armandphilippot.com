@@ -7,7 +7,7 @@ const fr = {
   },
   main: {
     instructions:
-      "Sélectionnez une application dans le menu pour afficher un aperçu en direct et les informations sur l'application.",
+      "Sélectionnez une application dans le menu pour afficher un aperçu en direct et les informations sur l'application (description, technologies, dépôts).",
     project: {
       details: {
         about: 'À propos de {{name}}',

@@ -331,9 +331,11 @@ function translateHTMLContent() {
   const brandingDesc = document.querySelector('.branding__description');
   const navLabel = document.querySelector('.nav__label');
   const license = document.querySelector('.copyright__license');
+  const instructions = document.querySelector('.instructions');
   brandingDesc.textContent = translate('branding.description');
   navLabel.textContent = translate('nav.title');
   license.title = translate('footer.license');
+  instructions.textContent = translate('main.instructions');
 }
 
 /**
