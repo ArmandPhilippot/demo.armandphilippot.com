@@ -179,6 +179,26 @@ const projects = [
     ],
     technologies: ['React', 'React router', 'Redux'],
   },
+  {
+    id: 'users-list',
+    name: 'Users list',
+    description: {
+      en: 'You can see a list of username. By clicking on it, the next column display information about the selected user.',
+      fr: "Vous pouvez voir une liste de noms d'utilisateur. En cliquant sur l'un d'eux, la colonne suivante affiche les informations à propos de cet utilisateur.",
+    },
+    path: './projects/js-small-apps/users-list/index.html',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/users-list',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/users-list',
+      },
+    ],
+    technologies: ['Vanilla Javascript', 'Fetch'],
+  },
 ];
 
 export default projects;
