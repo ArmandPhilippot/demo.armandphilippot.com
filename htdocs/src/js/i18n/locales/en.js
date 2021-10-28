@@ -25,6 +25,10 @@ const en = {
     },
   },
   footer: {
+    legalNotice: {
+      txt: 'Legal notice',
+      link: 'legal-notice.html',
+    },
     license: 'License MIT',
   },
 };

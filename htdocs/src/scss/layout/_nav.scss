@@ -16,11 +16,11 @@
     }
   }
 
-  &__item {
+  &:not(&--footer) &__item {
     margin: fun.get-var(spacing-2xs) 0;
   }
 
-  &__link {
+  &:not(&--footer) &__link {
     background-image: linear-gradient(
       to left,
       #{fun.get-var(color-bg)} 0,

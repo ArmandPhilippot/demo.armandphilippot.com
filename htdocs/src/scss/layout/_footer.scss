@@ -2,8 +2,15 @@
 @use "../abstracts/mixins" as mix;
 
 .footer {
+  align-items: center;
   background: fun.get-var(color-bg-secondary);
   border-top: fun.convert-px(1) solid fun.get-var(color-border-light);
+  display: flex;
+  flex-flow: row wrap;
+  font-family: fun.get-var(font-family-secondary);
+  font-size: fun.get-var(font-size-md);
+  gap: fun.get-var(spacing-3xs);
+  justify-content: center;
   padding: fun.get-var(spacing-sm) fun.get-var(spacing-md)
     calc(#{fun.get-var(toolbar-height)} + #{fun.get-var(spacing-sm)});
 
@@ -13,14 +20,21 @@
       padding: fun.get-var(spacing-sm) fun.get-var(spacing-md);
     }
   }
+
+  .nav {
+    display: inline-flex;
+    gap: fun.get-var(spacing-3xs);
+
+    &::after {
+      content: "/";
+    }
+  }
 }
 
 .copyright {
   align-items: center;
   display: flex;
   flex-flow: row wrap;
-  font-family: fun.get-var(font-family-secondary);
-  font-size: fun.get-var(font-size-md);
   gap: fun.get-var(spacing-3xs);
   justify-content: center;
 }

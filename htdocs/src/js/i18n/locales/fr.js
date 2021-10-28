@@ -25,6 +25,10 @@ const fr = {
     },
   },
   footer: {
+    legalNotice: {
+      txt: 'Mentions légales',
+      link: 'mentions-legales.html',
+    },
     license: 'Licence MIT',
   },
 };

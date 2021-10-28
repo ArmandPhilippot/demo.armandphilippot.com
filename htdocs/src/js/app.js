@@ -327,6 +327,18 @@ function printRequestedPage() {
   }
 }
 
+/**
+ * Replace the legal notice link and text.
+ */
+function replaceLegalNoticeLink() {
+  const link = document.querySelector('.nav__link--legal');
+  link.href = translate('footer.legalNotice.link');
+  link.textContent = translate('footer.legalNotice.txt');
+}
+
+/**
+ * Translate all text available in HTML templates.
+ */
 function translateHTMLContent() {
   const brandingDesc = document.querySelector('.branding__description');
   const navLabel = document.querySelector('.nav__label');
@@ -335,7 +347,7 @@ function translateHTMLContent() {
   brandingDesc.textContent = translate('branding.description');
   navLabel.textContent = translate('nav.title');
   license.title = translate('footer.license');
-  instructions.textContent = translate('main.instructions');
+  if (instructions) instructions.textContent = translate('main.instructions');
 }
 
 /**
@@ -357,6 +369,7 @@ function setAppLocale() {
 function init() {
   setAppLocale();
   translateHTMLContent();
+  replaceLegalNoticeLink();
   loadWebpackStyles();
   printProjectsNav();
   updateView();
