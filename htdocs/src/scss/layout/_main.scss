@@ -19,13 +19,34 @@
   }
 }
 
+// NoScript extension seems to replace noscript tag with a span.
+.main > span,
+.instructions,
+noscript {
+  background: fun.get-var(color-bg);
+  padding: fun.get-var(spacing-md);
+  text-align: center;
+
+  @include mix.media("screen") {
+    @include mix.dimensions("lg") {
+      grid-column: 1 / -1;
+    }
+  }
+}
+
 .instructions {
   align-items: center;
-  background: fun.get-var(color-bg);
   display: flex;
-  height: 100%;
   justify-content: center;
-  padding: fun.get-var(spacing-md);
+}
+
+.legal-notice {
+  height: 100%;
+  overflow-y: auto;
+  padding: clamp(#{fun.get-var(spacing-md)}, 3vw, #{fun.get-var(spacing-lg)});
+  scrollbar-color: fun.get-var(color-primary-light-opacity)
+    fun.get-var(color-bg-tertiary);
+  width: 100%;
 
   @include mix.media("screen") {
     @include mix.dimensions("lg") {
