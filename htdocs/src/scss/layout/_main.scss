@@ -68,6 +68,11 @@
     }
   }
 
+  &__description {
+    margin-bottom: fun.get-var(spacing-md);
+    white-space: pre-wrap;
+  }
+
   .list {
     &--tech {
       padding-left: fun.get-var(spacing-sm);

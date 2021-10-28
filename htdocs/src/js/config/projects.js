@@ -163,8 +163,8 @@ const projects = [
     id: 'todos',
     name: 'Todos',
     description: {
-      en: 'You can add, remove or mark as done your todos. For each todos, you can add some details in addition to the title.',
-      fr: 'Vous pouvez ajouter, supprimer ou marquer comme fait vos "todo". Pour chaque "todo", vous pouvez ajouter des détails en plus du titre.',
+      en: 'You can add, remove or mark as done your todos. For each todos, you can add some details in addition to the title.\n\nLogin: demo@email.com\nPassword: demo',
+      fr: 'Vous pouvez ajouter, supprimer ou marquer comme fait vos "todo". Pour chaque "todo", vous pouvez ajouter des détails en plus du titre.\n\nLogin : demo@email.com\nMot de passe : demo',
     },
     path: './projects/react-small-apps/todos/build/',
     repo: [

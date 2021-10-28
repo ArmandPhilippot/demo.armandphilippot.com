@@ -183,7 +183,8 @@ function getProjectDetails(project) {
   let description;
 
   if (project.description) {
-    description = document.createElement('p');
+    description = document.createElement('div');
+    description.classList.add('project-details__description');
     description.textContent = project.description[locale] || '';
   } else {
     description = '';
