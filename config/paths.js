@@ -10,6 +10,6 @@ module.exports = {
     style: path.resolve(devFolder, './scss/style.scss'),
   },
   dist: path.resolve(devFolder, '../assets/'),
-  files: [path.resolve(devFolder, '../**/*.php')],
+  files: [path.resolve(devFolder, '../**/*.html')],
   sassPaths: [path.resolve(devFolder, '../../node_modules/modern-normalize/')],
 };
