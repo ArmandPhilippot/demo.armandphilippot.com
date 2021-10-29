@@ -80,6 +80,26 @@ const projects = [
     technologies: ['Vanilla Javascript', 'SVG'],
   },
   {
+    id: 'color-cycle',
+    name: 'Color cycle',
+    description: {
+      en: 'Play with hexadecimal colors. Set a color, then choose one or more increment values and start the preview.',
+      fr: "Jouez avec les couleurs hexadécimales. Définissez une couleur, puis choisissez une ou plusieurs valeurs d'incrémentation et démarrez l'aperçu.",
+    },
+    path: './projects/js-small-apps/color-cycle/index.html',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/js-small-apps/tree/main/color-cycle',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/js-small-apps/-/tree/main/color-cycle',
+      },
+    ],
+    technologies: ['Vanilla Javascript'],
+  },
+  {
     id: 'css-border-previewer',
     name: 'CSS Border Previewer',
     description: {
