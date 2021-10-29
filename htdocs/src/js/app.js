@@ -247,6 +247,7 @@ function showProject(id) {
   });
   detailsBtn.addEventListener('click', toggleProjectDetails);
   window.history.pushState({}, currentProject.name, `#${id}`);
+  document.title = `${currentProject.name} | Demo | Armand Philippot`;
   main.replaceChildren(preview, details);
 }
 
