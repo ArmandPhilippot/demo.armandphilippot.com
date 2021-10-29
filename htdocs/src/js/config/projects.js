@@ -43,8 +43,8 @@ const projects = [
     id: 'calculator',
     name: 'Calculator',
     description: {
-      en: 'A basic calculator.',
-      fr: 'Une simple calculette.',
+      en: 'A basic calculator. Decimal part is limited to 3 digits. The first part is limited to 8 digits. If the result does not respect these limits, you will see an error.',
+      fr: 'Une simple calculette. La partie décimale est limitée à 3 chiffres. La première partie est limitée à 8 chiffres. Si le résultat ne respecte pas ces limites, vous verrez une erreur.',
     },
     path: './projects/js-small-apps/calculator/index.html',
     repo: [
