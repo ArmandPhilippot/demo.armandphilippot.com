@@ -246,7 +246,7 @@ function showProject(id) {
     name: currentProject.name,
   });
   detailsBtn.addEventListener('click', toggleProjectDetails);
-  window.history.pushState({}, currentProject.name, `#${id}`);
+  window.history.pushState({}, currentProject.name, `/#${id}`);
   document.title = `${currentProject.name} | Demo | Armand Philippot`;
   main.replaceChildren(preview, details);
 }
@@ -276,7 +276,7 @@ function getProjectsNavItem(id, name) {
   const item = document.createElement('li');
   const link = document.createElement('a');
   link.classList.add('nav__link');
-  link.href = `#${id}`;
+  link.href = `/#${id}`;
   link.id = id;
   link.textContent = name;
   link.addEventListener('click', (e) => {
