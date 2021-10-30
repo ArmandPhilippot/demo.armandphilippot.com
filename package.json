@@ -18,7 +18,7 @@
     "lint:js": "eslint --ext .js,.jsx",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
     "release": "standard-version -s",
-    "rtl": "rtlcss htdocs/assets/css/style.css htdocs/assets/css/style-rtl.css",
+    "rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
     "serve": "webpack serve --node-env=development",
     "watch": "webpack --watch --progress --node-env=development"
   },

@@ -55,21 +55,6 @@ noscript {
   }
 }
 
-.legal-notice {
-  height: 100%;
-  overflow-y: auto;
-  padding: clamp(#{fun.get-var(spacing-md)}, 3vw, #{fun.get-var(spacing-lg)});
-  scrollbar-color: fun.get-var(color-primary-light-opacity)
-    fun.get-var(color-bg-tertiary);
-  width: 100%;
-
-  @include mix.media("screen") {
-    @include mix.dimensions("lg") {
-      grid-column: 1 / -1;
-    }
-  }
-}
-
 .project-preview {
   background: fun.get-var(color-bg);
   flex: 0 1 100%;

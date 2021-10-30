@@ -1,6 +1,6 @@
-[submodule "htdocs/projects/js-small-apps"]
-	path = htdocs/projects/js-small-apps
+[submodule "projects/js-small-apps"]
+	path = projects/js-small-apps
 	url = git@github.com:ArmandPhilippot/js-small-apps.git
-[submodule "htdocs/projects/react-small-apps"]
-	path = htdocs/projects/react-small-apps
+[submodule "projects/react-small-apps"]
+	path = projects/react-small-apps
 	url = git@github.com:ArmandPhilippot/react-small-apps.git

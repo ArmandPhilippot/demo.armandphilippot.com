@@ -32,7 +32,7 @@ module.exports = {
         generator: {
           filename: (img) => {
             const relativePath = img.filename;
-            const filteredPath = relativePath.replace('htdocs/src/', '');
+            const filteredPath = relativePath.replace('src/', '');
             return filteredPath;
           },
         },
@@ -43,7 +43,7 @@ module.exports = {
         generator: {
           filename: (font) => {
             const relativePath = font.filename;
-            const filteredPath = relativePath.replace('htdocs/src/', '');
+            const filteredPath = relativePath.replace('src/', '');
             return filteredPath;
           },
         },
