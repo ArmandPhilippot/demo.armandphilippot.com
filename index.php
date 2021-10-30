@@ -1,11 +1,21 @@
+<?php
+require_once('./config/dotenv.php');
+
+$dap_current_env = dap_get_current_env();
+?>
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Demo | Armand Philippot</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <?php
+    if ($dap_current_env === 'production') {
+        echo '<link rel="stylesheet" href="assets/css/style.css" />';
+    }
+    ?>
   </head>
 
   <body class="body">
@@ -19,16 +29,10 @@
       <div class="branding">
         <div class="branding__logo logo">
           <a href="/" rel="home" class="logo__link">
-            <img
-              src="./assets/images/armand-philippot.jpg"
-              alt="Back to homepage"
-              class="logo__image logo__image--front"
-            />
-            <img
-              src="./assets/images/armand-philippot-logo.svg"
-              alt="Back to homepage"
-              class="logo__image logo__image--back"
-            />
+            <img src="./assets/images/armand-philippot.jpg" alt="Back to homepage"
+              class="logo__image logo__image--front" />
+            <img src="./assets/images/armand-philippot-logo.svg" alt="Back to homepage"
+              class="logo__image logo__image--back" />
           </a>
         </div>
         <h1 class="branding__title">
@@ -57,7 +61,7 @@
       <nav class="nav nav--footer">
         <ul class="nav__list">
           <li class="nav__item">
-            <a href="legal-notice.html" class="nav__link nav__link--legal">
+            <a href="legal-notice.php" class="nav__link nav__link--legal">
               Legal notice
             </a>
           </li>
@@ -66,12 +70,11 @@
       <div class="copyright">
         <span class="copyright__license" title="License MIT">MIT</span>
         <span class="copyright__date">2021.</span>
-        <a href="https://www.armandphilippot.com/" class="copyright__author"
-          >Armand Philippot.</a
-        >
+        <a href="https://www.armandphilippot.com/" class="copyright__author">Armand Philippot.</a>
       </div>
     </footer>
     <script src="./assets/js/runtime.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
+
 </html>

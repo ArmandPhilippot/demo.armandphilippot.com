@@ -27,7 +27,7 @@ const en = {
   footer: {
     legalNotice: {
       txt: 'Legal notice',
-      link: 'legal-notice.html',
+      link: 'legal-notice.php',
     },
     license: 'License MIT',
   },

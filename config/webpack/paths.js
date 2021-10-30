@@ -1,6 +1,6 @@
 const path = require('path');
 
-const devFolder = path.resolve(__dirname, '../src/');
+const devFolder = path.resolve(__dirname, '../../src/');
 
 module.exports = {
   src: {
@@ -10,6 +10,6 @@ module.exports = {
     style: path.resolve(devFolder, './scss/style.scss'),
   },
   dist: path.resolve(devFolder, '../assets/'),
-  files: [path.resolve(devFolder, '../**/*.html')],
+  files: [path.resolve(devFolder, '../**/*.php')],
   sassPaths: [path.resolve(devFolder, '../node_modules/modern-normalize/')],
 };

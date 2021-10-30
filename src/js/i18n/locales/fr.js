@@ -27,7 +27,7 @@ const fr = {
   footer: {
     legalNotice: {
       txt: 'Mentions légales',
-      link: 'mentions-legales.html',
+      link: 'mentions-legales.php',
     },
     license: 'Licence MIT',
   },
