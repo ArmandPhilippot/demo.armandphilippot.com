@@ -8,6 +8,11 @@
     "email": "contact@email.com",
     "url": "https://www.armandphilippot.com"
   },
+  "private": true,
+  "engines": {
+    "node": "^16.4.0",
+    "yarn": "^1.22.0"
+  },
   "scripts": {
     "build": "webpack --node-env=production && npm run rtl",
     "fix": "npm-run-all --parallel fix:*",
@@ -18,7 +23,7 @@
     "lint:js": "eslint --ext .js,.jsx",
     "lint:php": "composer lint",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
-    "release": "standard-version -s",
+    "release": "standard-version -a -s",
     "rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
     "serve": "webpack serve --node-env=development",
     "watch": "webpack --watch --progress --node-env=development"
@@ -70,5 +75,10 @@
     "dotenv-expand": "^5.1.0",
     "i18n-js": "^3.8.0",
     "modern-normalize": "^1.1.0"
+  },
+  "standard-version": {
+    "scripts": {
+      "prerelease": "yarn run build && git add ."
+    }
   }
 }
