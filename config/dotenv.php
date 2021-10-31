@@ -8,9 +8,9 @@
  */
 function dap_get_current_env()
 {
-    if (file_exists(__DIR__ . '/vendor/autoload.php')) {
-        require_once __DIR__ . '/vendor/autoload.php';
-        $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+    if (file_exists(dirname(__DIR__) . '/vendor/autoload.php')) {
+        require_once dirname(__DIR__) . '/vendor/autoload.php';
+        $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
         $dotenv->safeLoad();
         $current_env = $_ENV['CURRENT_ENV'];
         return $current_env;
