@@ -14,6 +14,8 @@ $dap_current_env = dap_get_current_env();
     <?php
     if ($dap_current_env === 'production') {
         echo '<link rel="stylesheet" href="assets/css/style.css" />';
+    } else {
+        echo '<script src="assets/js/style.js"></script>';
     }
     ?>
   </head>

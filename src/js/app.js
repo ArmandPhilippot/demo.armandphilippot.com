@@ -11,7 +11,7 @@ import {
   showFromBottom,
   showFromLeft,
 } from './utilities/animations';
-import { isSmallVw, isStyleJsExists } from './utilities/helpers';
+import { isSmallVw } from './utilities/helpers';
 
 /**
  * Show/hide header and footer with slide animation (left).
@@ -304,18 +304,6 @@ function printProjectsNav() {
 }
 
 /**
- * Add style.js script for development purposes.
- */
-function loadWebpackStyles() {
-  if (isStyleJsExists()) {
-    const head = document.querySelector('head');
-    const script = document.createElement('script');
-    script.src = 'assets/js/style.js';
-    head.appendChild(script);
-  }
-}
-
-/**
  * Load corresponding project if the requested page contains a hash.
  */
 function printRequestedPage() {
@@ -371,7 +359,6 @@ function init() {
   setAppLocale();
   translateHTMLContent();
   replaceLegalNoticeLink();
-  loadWebpackStyles();
   printProjectsNav();
   updateView();
   listenWindowSize();
