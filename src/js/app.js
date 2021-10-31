@@ -11,7 +11,14 @@ import {
   showFromBottom,
   showFromLeft,
 } from './utilities/animations';
-import { isSmallVw } from './utilities/helpers';
+
+/**
+ * Check the size of the current viewport.
+ * @returns {Boolean} True if viewport lower than 1200px; false otherwise.
+ */
+function isSmallVw() {
+  return window.innerWidth < 1200;
+}
 
 /**
  * Show/hide header and footer with slide animation (left).
