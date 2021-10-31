@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.1](https://github.com/ArmandPhilippot/demo.armandphilippot.com/compare/v1.0.0...v1.0.1) (2021-10-31)
+
+### Bug Fixes
+
+- add favicon ([bc4de0e](https://github.com/ArmandPhilippot/demo.armandphilippot.com/commit/bc4de0e776d6b566c4a53b9b22fb74bf0f6b7f32))
+
 ## 1.0.0 (2021-10-31)
 
 ### Features
