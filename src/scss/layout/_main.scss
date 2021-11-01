@@ -24,6 +24,8 @@
 .instructions,
 noscript {
   background: fun.get-var(color-bg);
+  margin: 0 auto;
+  max-width: 80ch;
   padding: fun.get-var(spacing-md);
   text-align: center;
 
@@ -31,6 +33,13 @@ noscript {
     @include mix.dimensions("lg") {
       grid-column: 1 / -1;
     }
+  }
+}
+
+.instructions,
+.legal-notice {
+  > * {
+    max-width: 80ch;
   }
 }
 
@@ -52,6 +61,10 @@ noscript {
     @include mix.dimensions("lg") {
       grid-column: 1 / -1;
     }
+  }
+
+  iframe {
+    max-width: 100%;
   }
 }
 
