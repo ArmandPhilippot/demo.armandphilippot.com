@@ -79,6 +79,17 @@ $dap_current_env = dap_get_current_env();
           Armand Philippot, are made available under the terms of the
           <a href="license.php">MIT license</a>.
         </p>
+        <h3>Statistics and audience metrics</h3>
+        <p>In order to adapt the site to visitor requests, the number of visits, the number of page views as well as the
+          activity of visitors to the site and their frequency of return are measured.</p>
+        <p>This site uses the Matomo statistics tool. The latter generates a cookie with a unique identifier, the
+          retention period of which is limited to 13 months. It is configured to hide the last 6 characters of your IP
+          address. Your browsing on the site is thus anonymized and the publisher can therefore under no circumstances
+          be traced back to a natural person by this means.</p>
+        <p>The Matomo statistics tool is one of the only tools validated by the French CNIL that does not require a
+          consent request.</p>
+        <iframe style="border: 0; height: 200px; width: 600px;"
+          src="https://demo.armandphilippot.com/config/matomo/matomo-proxy.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=f3f7fc&fontColor=0f1b29&fontSize=1rem&fontFamily="></iframe>
       </div>
     </main>
     <footer class="footer">
