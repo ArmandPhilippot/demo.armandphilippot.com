@@ -160,6 +160,26 @@ const projects = [
     technologies: ['React', 'React router'],
   },
   {
+    id: 'recipe',
+    name: 'Recipes',
+    description: {
+      en: 'Create your recipes list. Edit existing recipes and/or search for new recipes.',
+      fr: 'Créez votre liste de recettes. Éditez les recettes existantes et/ou chercher de nouvelles recettes à ajouter.',
+    },
+    path: './projects/angular-small-apps/recipes/dist/recipes/',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/angular-small-apps/tree/main/recipes',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/angular-small-apps/-/tree/main/recipes',
+      },
+    ],
+    technologies: ['Angular', 'Typescript'],
+  },
+  {
     id: 'rps-game',
     name: 'Rock Paper Scissors',
     description: {

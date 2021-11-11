@@ -4,3 +4,6 @@
 [submodule "projects/react-small-apps"]
 	path = projects/react-small-apps
 	url = git@github.com:ArmandPhilippot/react-small-apps.git
+[submodule "projects/angular-small-apps"]
+	path = projects/angular-small-apps
+	url = git@github.com:ArmandPhilippot/angular-small-apps.git
