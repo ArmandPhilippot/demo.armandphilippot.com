@@ -13,7 +13,7 @@ $MATOMO_URL = 'https://analytics.armandphilippot.com/';
 // Edit the line below and replace http://your-tracker-proxy.org/ with the URL to your tracker-proxy
 // setup. This URL will be used in Matomo output that contains the Matomo URL, so your Matomo is effectively
 // hidden.
-$PROXY_URL = 'https://demo.armandphilippot.com/';
+$PROXY_URL = 'https://demo.armandphilippot.com/matomo/';
 
 // Edit the line below, and replace xyz by the token_auth for the user "UserTrackingAPI"
 // which you created when you followed instructions above.

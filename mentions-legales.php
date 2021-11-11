@@ -89,7 +89,7 @@ $dap_current_env = dap_get_current_env();
         <p>L’outil de statistiques Matomo est l’un des seuls outils validés par la CNIL ne nécessitant pas de demande de
           consentement.</p>
         <iframe style="border: 0; height: 200px; width: 600px;"
-          src="https://demo.armandphilippot.com/config/matomo/matomo-proxy.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=f3f7fc&fontColor=0f1b29&fontSize=1rem&fontFamily="></iframe>
+          src="https://demo.armandphilippot.com/matomo/matomo-proxy.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=f3f7fc&fontColor=0f1b29&fontSize=1rem&fontFamily="></iframe>
       </div>
     </main>
     <footer class="footer">
@@ -119,7 +119,7 @@ $dap_current_env = dap_get_current_env();
       _paq.push(['enableLinkTracking']);
       (function() {
         var u = "//demo.armandphilippot.com/";
-        _paq.push(["setTrackerUrl", u + "config/matomo/matomo.php"]);
+        _paq.push(["setTrackerUrl", u + "matomo/matomo.php"]);
         _paq.push(["setSiteId", "3"]);
         var d = document,
           g = d.createElement("script"),
@@ -127,7 +127,7 @@ $dap_current_env = dap_get_current_env();
         g.type = "text/javascript";
         g.async = true;
         g.defer = true;
-        g.src = u + "config/matomo/matomo.php";
+        g.src = u + "matomo/matomo.php";
         s.parentNode.insertBefore(g, s);
       })();
     </script>

@@ -111,7 +111,7 @@ $dap_current_env = dap_get_current_env();
       _paq.push(['enableLinkTracking']);
       (function() {
         var u = "//demo.armandphilippot.com/";
-        _paq.push(["setTrackerUrl", u + "config/matomo/matomo.php"]);
+        _paq.push(["setTrackerUrl", u + "matomo/matomo.php"]);
         _paq.push(["setSiteId", "3"]);
         var d = document,
           g = d.createElement("script"),
@@ -119,7 +119,7 @@ $dap_current_env = dap_get_current_env();
         g.type = "text/javascript";
         g.async = true;
         g.defer = true;
-        g.src = u + "config/matomo/matomo.php";
+        g.src = u + "matomo/matomo.php";
         s.parentNode.insertBefore(g, s);
       })();
     </script>
