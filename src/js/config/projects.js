@@ -126,15 +126,15 @@ const projects = [
       en: 'Choose a random image, set one or more texts then position them. Your meme is ready!',
       fr: 'Choisissez une image aléatoire, définissez un ou plusieurs textes et positionnez-les. Votre meme est prêt !',
     },
-    path: './projects/react-small-apps/meme-generator/build/index.html',
+    path: './projects/react-small-apps/apps/meme-generator/build/index.html',
     repo: [
       {
         name: 'Github',
-        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/meme-generator',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/apps/meme-generator',
       },
       {
         name: 'Gitlab',
-        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/meme-generator',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/apps/meme-generator',
       },
     ],
     technologies: ['React', 'Fetch'],
@@ -146,15 +146,15 @@ const projects = [
       en: 'Create as many pages as you want and fill them. You can define a title and a body. Then you can easily navigate between your pages with the nav.',
       fr: 'Créez autant de pages que vous le souhaitez et remplissez-les. Vous pouvez définir un titre et un corps de texte. Ensuite, vous pouvez facilement naviguer entre vos pages grâce à la navigation.',
     },
-    path: './projects/react-small-apps/notebook/build/',
+    path: './projects/react-small-apps/apps/notebook/build/',
     repo: [
       {
         name: 'Github',
-        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/notebook',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/apps/notebook',
       },
       {
         name: 'Gitlab',
-        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/notebook',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/apps/notebook',
       },
     ],
     technologies: ['React', 'React router'],
@@ -166,15 +166,15 @@ const projects = [
       en: 'Create your recipes list. Edit existing recipes and/or search for new recipes.',
       fr: 'Créez votre liste de recettes. Éditez les recettes existantes et/ou chercher de nouvelles recettes à ajouter.',
     },
-    path: './projects/angular-small-apps/recipes/dist/recipes/',
+    path: './projects/angular-small-apps/apps/recipes/dist/recipes/',
     repo: [
       {
         name: 'Github',
-        url: 'https://github.com/ArmandPhilippot/angular-small-apps/tree/main/recipes',
+        url: 'https://github.com/ArmandPhilippot/angular-small-apps/tree/main/apps/recipes',
       },
       {
         name: 'Gitlab',
-        url: 'https://gitlab.com/ArmandPhilippot/angular-small-apps/-/tree/main/recipes',
+        url: 'https://gitlab.com/ArmandPhilippot/angular-small-apps/-/tree/main/apps/recipes',
       },
     ],
     technologies: ['Angular', 'Typescript'],
@@ -206,15 +206,15 @@ const projects = [
       en: 'You can add, remove or mark as done your todos. For each todos, you can add some details in addition to the title.\n\nLogin: demo@email.com\nPassword: demo',
       fr: 'Vous pouvez ajouter, supprimer ou marquer comme fait vos "todo". Pour chaque "todo", vous pouvez ajouter des détails en plus du titre.\n\nLogin : demo@email.com\nMot de passe : demo',
     },
-    path: './projects/react-small-apps/todos/build/',
+    path: './projects/react-small-apps/apps/todos/build/',
     repo: [
       {
         name: 'Github',
-        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/todos',
+        url: 'https://github.com/ArmandPhilippot/react-small-apps/tree/main/apps/todos',
       },
       {
         name: 'Gitlab',
-        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/todos',
+        url: 'https://gitlab.com/ArmandPhilippot/react-small-apps/-/tree/main/apps/todos',
       },
     ],
     technologies: ['React', 'React router', 'Redux'],
