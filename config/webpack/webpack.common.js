@@ -67,29 +67,33 @@ module.exports = {
   },
   plugins: [
     new ImageMinimizerPlugin({
-      minimizerOptions: {
-        plugins: [
-          ['gifsicle', { interlaced: true }],
-          ['mozjpeg', { progressive: true, quality: 75 }],
-          ['optipng', { optimizationLevel: 5 }],
-          [
-            'svgo',
-            {
-              plugins: [
-                {
-                  name: 'preset-default',
-                  params: {
-                    overrides: {
-                      removeTitle: false,
-                      removeViewBox: false,
+      minimizer: {
+        implementation: ImageMinimizerPlugin.imageminMinify,
+        options: {
+          plugins: [
+            ['gifsicle', { interlaced: true }],
+            ['mozjpeg', { progressive: true, quality: 75 }],
+            ['optipng', { optimizationLevel: 5 }],
+            // Svgo configuration here https://github.com/svg/svgo#configuration
+            [
+              'svgo',
+              {
+                plugins: [
+                  {
+                    name: 'preset-default',
+                    params: {
+                      overrides: {
+                        removeTitle: false,
+                        removeViewBox: false,
+                      },
                     },
                   },
-                },
-                'removeDimensions',
-              ],
-            },
+                  'removeDimensions',
+                ],
+              },
+            ],
           ],
-        ],
+        },
       },
     }),
     new CopyPlugin({

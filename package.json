@@ -45,6 +45,7 @@
     "eslint-plugin-import": "^2.25.4",
     "husky": "^7.0.2",
     "image-minimizer-webpack-plugin": "^3.2.3",
+    "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
