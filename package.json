@@ -14,6 +14,7 @@
     "yarn": "^1.22.0"
   },
   "scripts": {
+    "prebuild": "./config/build.sh",
     "build": "webpack --node-env=production && npm run rtl",
     "fix": "npm-run-all --parallel fix:*",
     "fix:js": "eslint --ext .js,.jsx --fix",
@@ -25,6 +26,7 @@
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
     "release": "standard-version -a -s",
     "rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
+    "preserve": "./config/build.sh",
     "serve": "webpack serve --node-env=development",
     "watch": "webpack --watch --progress --node-env=development"
   },
