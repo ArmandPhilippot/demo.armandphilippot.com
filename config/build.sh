@@ -4,7 +4,13 @@
 # Build all Angular & React projects.
 
 ###############################################################################
-# 1.0. Helpers
+# 1.0. Config
+###############################################################################
+_ANGULAR_PROJECTS="projects/angular-small-apps"
+_REACT_PROJECTS="projects/react-small-apps"
+
+###############################################################################
+# 2.0. Helpers
 ###############################################################################
 _COLOR_RESET=$(printf '\e[0m')
 _COLOR_BLUE=$(printf '\e[34m')
@@ -45,17 +51,17 @@ error_unexpected() {
 }
 
 ###############################################################################
-# 2.0. Angular
+# 3.0. Angular
 ###############################################################################
 
 install_angular_dependencies() {
-  if [ ! -d "./projects/angular-small-apps" ]; then
+  if [ ! -d "./public/${_ANGULAR_PROJECTS}" ]; then
     error "Angular projects are missing."
     printf "Exit.\n"
     exit 1
   fi
 
-  cd "./projects/angular-small-apps" || exit
+  cd "./public/${_ANGULAR_PROJECTS}" || exit
   yarn
   cd "$OLDPWD" || exit
 }
@@ -63,8 +69,8 @@ install_angular_dependencies() {
 build_angular_app() {
   [ $# -ne 1 ] && error_unexpected
 
-  cd "./projects/angular-small-apps/" || exit
-  yarn --cwd "apps/${1}" run build --base-href="/projects/angular-small-apps/apps/${1}/dist/${1}/"
+  cd "./public/${_ANGULAR_PROJECTS}" || exit
+  yarn --cwd "apps/${1}" run build --base-href="/${_ANGULAR_PROJECTS}/apps/${1}/dist/${1}/"
   info "${1} built."
   cd "$OLDPWD" || exit
 }
@@ -76,17 +82,17 @@ setup_angular_projects() {
 }
 
 ###############################################################################
-# 3.0. React
+# 4.0. React
 ###############################################################################
 
 install_react_dependencies() {
-  if [ ! -d "./projects/react-small-apps" ]; then
+  if [ ! -d "./public/${_REACT_PROJECTS}" ]; then
     error "React projects are missing."
     printf "Exit.\n"
     exit 1
   fi
 
-  cd "./projects/react-small-apps" || exit
+  cd "./public/${_REACT_PROJECTS}" || exit
   yarn
   cd "$OLDPWD" || exit
 }
@@ -94,8 +100,8 @@ install_react_dependencies() {
 build_react_app() {
   [ $# -ne 1 ] && error_unexpected
 
-  cd "./projects/react-small-apps/" || exit
-  PUBLIC_URL="/projects/react-small-apps/apps/${1}/build/" yarn --cwd "apps/${1}" run build
+  cd "./public/${_REACT_PROJECTS}" || exit
+  PUBLIC_URL="/${_REACT_PROJECTS}/apps/${1}/build/" yarn --cwd "apps/${1}" run build
   info "${1} built."
   cd "$OLDPWD" || exit
 }
@@ -109,7 +115,7 @@ setup_react_projects() {
 }
 
 ###############################################################################
-# 4.0. Main
+# 5.0. Main
 ###############################################################################
 
 # Check if Yarn is installed.

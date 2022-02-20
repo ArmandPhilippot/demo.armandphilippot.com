@@ -1,0 +1,10 @@
+# Dependencies
+node_modules
+yarn-error*
+
+# Misc
+.vscode
+
+# Dotenv
+.env*
+!.env.example

@@ -1,0 +1,181 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.618;
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+}
+
+.header,
+.footer,
+.result {
+  width: min(calc(100vw - 2rem), calc(1200px - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.preview,
+.settings {
+  width: min(calc(100vw - 2rem), calc(1200px / 2 - 2rem));
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (min-width: 1200px) {
+  .preview {
+    margin-right: 0;
+  }
+
+  .settings {
+    margin-left: 0;
+  }
+}
+
+.header {
+  padding: 2rem 0 3rem;
+  text-align: center;
+}
+
+.branding {
+  color: hsl(219, 64%, 35%);
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+  margin: auto;
+}
+
+.preview {
+  border: 1px solid #ccc;
+  padding: 3rem;
+  position: relative;
+}
+
+.box {
+  border: 1px solid #000;
+  width: 100%;
+  height: 20vh;
+  position: sticky;
+  top: 3rem;
+}
+
+.result {
+  max-width: 100%;
+}
+
+.result__pre {
+  background: #333;
+  color: #fff;
+  min-height: 20rem;
+  margin: 1rem auto;
+  padding: 0 1rem;
+  overflow-x: auto;
+  tab-size: 4;
+}
+
+.result .btn {
+  margin: auto;
+}
+
+@media screen and (min-width: 1440px) {
+  .result__pre {
+    margin: 1rem 0;
+  }
+}
+
+.footer {
+  margin-top: 2rem;
+  padding: 1rem 0;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.form p {
+  font-weight: 600;
+}
+
+.form__fieldset {
+  border-color: hsl(219, 64%, 35%);
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 1rem;
+}
+
+.form__fieldset--flex {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 1rem;
+}
+
+.form__legend {
+  color: hsl(219, 64%, 35%);
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0 0.5rem;
+}
+
+.form__item--flex {
+  display: flex;
+  flex-flow: column wrap;
+}
+
+.form__item:not(.form__item--flex) + * {
+  margin-top: 1rem;
+}
+
+.form__input,
+.form__select {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form__input {
+  padding: 0.2rem 0.5rem;
+}
+
+.form__select {
+  padding: 0.4rem 0.5rem;
+}
+
+.btn {
+  background: #fff;
+  border: 2px solid hsl(219, 64%, 35%);
+  box-shadow: 1px 1px 2px hsl(219, 64%, 15%), 0 0 2px 1px hsl(219, 64%, 15%);
+  color: hsl(219, 64%, 35%);
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: 600;
+  line-height: inherit;
+  display: block;
+  padding: 0.5rem;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out 0s;
+}
+
+.btn:hover,
+.btn:focus {
+  background: hsl(219, 64%, 35%);
+  color: #fff;
+}
+
+.btn:active {
+  transform: translateX(1px) translateY(1px);
+}

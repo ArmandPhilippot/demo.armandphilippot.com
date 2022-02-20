@@ -9,7 +9,7 @@ module.exports = {
     scripts: path.resolve(devFolder, './js/app.js'),
     style: path.resolve(devFolder, './scss/style.scss'),
   },
-  dist: path.resolve(devFolder, '../assets/'),
-  files: [path.resolve(devFolder, '../**/*.php')],
+  dist: path.resolve(devFolder, '../public/assets/'),
+  files: [path.resolve(devFolder, '../public/**/*.php')],
   sassPaths: [path.resolve(devFolder, '../node_modules/modern-normalize/')],
 };

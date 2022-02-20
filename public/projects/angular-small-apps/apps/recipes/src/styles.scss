@@ -1,0 +1,26 @@
+/// This file gather all global styles.
+
+/**
+ * Vendors
+ */
+@use "modern-normalize";
+
+/**
+ * Base
+ */
+@use "styles/base/base";
+@use "styles/base/typography";
+
+/**
+ * Layout
+ */
+@use "styles/layout/grid";
+@use "styles/layout/footer";
+@use "styles/layout/main";
+
+/**
+ * Components
+ */
+@use "styles/components/buttons";
+@use "styles/components/card";
+@use "styles/components/meta";
