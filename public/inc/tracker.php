@@ -1,12 +1,19 @@
 <?php
 /**
  * Matomo tracking code.
+ * php version 7.4
+ *
+ * @category  Controller
+ * @package   DAP
+ * @author    Armand Philippot <contact@armandphilippot.com>
+ * @copyright 2022 Armand Philippot
+ * @license   MIT <https://opensource.org/licenses/MIT>
+ * @link      https://demo.armandphilippot.com/
  */
 ?>
 <!-- Matomo -->
 <script>
   var _paq = window._paq = window._paq || [];
-  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
   _paq.push(["setDoNotTrack", true]);
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);

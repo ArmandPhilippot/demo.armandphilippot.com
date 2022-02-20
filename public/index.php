@@ -1,5 +1,16 @@
 <?php
-require_once('./inc/dotenv.php');
+/**
+ * Homepage view.
+ * php version 7.4
+ *
+ * @category  View
+ * @package   DAP
+ * @author    Armand Philippot <contact@armandphilippot.com>
+ * @copyright 2022 Armand Philippot
+ * @license   MIT <https://opensource.org/licenses/MIT>
+ * @link      https://demo.armandphilippot.com/
+ */
+require_once './inc/dotenv.php';
 
 $dap_current_env = dap_get_current_env();
 ?>
@@ -51,7 +62,7 @@ $dap_current_env = dap_get_current_env();
         </h1>
         <p class="branding__description">Front-end developer</p>
       </div>
-      <nav class="nav">
+      <nav class="nav" aria-label="Main">
         <p class="nav__label">App list:</p>
         <ul class="nav__list"></ul>
       </nav>
@@ -69,7 +80,7 @@ $dap_current_env = dap_get_current_env();
       </noscript>
     </main>
     <footer class="footer">
-      <nav class="nav nav--footer">
+      <nav class="nav nav--footer" aria-label="Footer">
         <ul class="nav__list">
           <li class="nav__item">
             <a href="legal-notice.php" class="nav__link nav__link--legal">
