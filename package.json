@@ -25,7 +25,7 @@
     "lint:php": "composer lint",
     "lint:scss": "stylelint \"**/*.scss\" --syntax scss --formatter verbose",
     "release": "standard-version -a -s",
-    "rtl": "rtlcss assets/css/style.css assets/css/style-rtl.css",
+    "rtl": "rtlcss public/assets/css/style.css public/assets/css/style-rtl.css",
     "preserve": "./config/build.sh",
     "serve": "webpack serve --node-env=development",
     "watch": "webpack --watch --progress --node-env=development"
