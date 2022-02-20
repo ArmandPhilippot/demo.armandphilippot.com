@@ -32,10 +32,10 @@ $dap_current_env = dap_get_current_env();
     <meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
     <meta name="theme-color" content="#194476">
     <?php
-    if ($dap_current_env === 'production') {
-        echo '<link rel="stylesheet" href="assets/css/style.css" />';
-    } else {
+    if ($dap_current_env === 'development') {
         echo '<script src="assets/js/style.js"></script>';
+    } else {
+        echo '<link rel="stylesheet" href="assets/css/style.css" />';
     }
     ?>
   </head>
