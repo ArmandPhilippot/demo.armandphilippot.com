@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/ArmandPhilippot/demo.armandphilippot.com/compare/v1.0.2...v2.0.0) (2022-02-20)
+
+
+### ⚠ BREAKING CHANGES
+
+* restructure repo
+
+### Bug Fixes
+
+* move matomo outside config and configure it correctly ([0be537e](https://github.com/ArmandPhilippot/demo.armandphilippot.com/commit/0be537e8c72912c858012ee015cdd62eeab0d0f0))
+
+
+* restructure repo ([73a5c7f](https://github.com/ArmandPhilippot/demo.armandphilippot.com/commit/73a5c7fae9ffbe9ada721148c8c454a643aceebe))
+
 ### [1.0.2](https://github.com/ArmandPhilippot/demo.armandphilippot.com/compare/v1.0.1...v1.0.2) (2021-11-01)
 
 ### [1.0.1](https://github.com/ArmandPhilippot/demo.armandphilippot.com/compare/v1.0.0...v1.0.1) (2021-10-31)
