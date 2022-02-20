@@ -78,10 +78,5 @@
     "dotenv-expand": "^8.0.1",
     "i18n-js": "^3.8.0",
     "modern-normalize": "^1.1.0"
-  },
-  "standard-version": {
-    "scripts": {
-      "prerelease": "yarn run build && git add ."
-    }
   }
 }
