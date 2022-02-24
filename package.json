@@ -74,6 +74,7 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.17.2",
+    "ackee-tracker": "^5.1.0",
     "dotenv": "^16.0.0",
     "dotenv-expand": "^8.0.1",
     "i18n-js": "^3.8.0",
