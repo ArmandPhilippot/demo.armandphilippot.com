@@ -91,16 +91,13 @@ $dap_current_env = dap_get_current_env();
           <a href="license.php">licence MIT</a>.
         </p>
         <h3>Statistiques et mesures d’audience</h3>
-        <p>En vue d’adapter le site aux demandes des visiteurs, le nombre de visites, le nombre de pages vues ainsi que
-          de l’activité des visiteurs sur le site et leur fréquence de retour sont mesurées.</p>
-        <p>Ce site utilise l’outil de statistiques Matomo. Ce dernier génère un cookie avec un identifiant unique, dont
-          la durée de conservation est limitée à 13 mois. Il est configuré de manière à masquer les 6 derniers
-          caractères de votre adresse IP. Votre navigation sur le site est ainsi anonymisée et l’éditeur ne peut donc en
-          aucun cas remonter par ce biais à une personne physique.</p>
-        <p>L’outil de statistiques Matomo est l’un des seuls outils validés par la CNIL ne nécessitant pas de demande de
-          consentement.</p>
-        <iframe title="Matomo opt out" style="border: 0; height: 200px; width: 600px;"
-          src="https://demo.armandphilippot.com/matomo/matomo-proxy.php?module=CoreAdminHome&action=optOut&language=fr&backgroundColor=f3f7fc&fontColor=0f1b29&fontSize=1rem&fontFamily="></iframe>
+        <p>Pour obtenir des informations sur le comportement des visiteurs, le site utilise Ackee. Il s’agit d’un
+          logiciel d’analyse respectueux de la vie privée. Vous pouvez en apprendre plus sur le fonctionnement et les
+          données collectées en allant sur <a href="https://docs.ackee.electerious.com/#/docs/Anonymization">le site
+            d’Ackee</a>.</p>
+        <p>Ce site utilise le mode détaillé afin d’adapter plus facilement le site à ses visiteurs. Ainsi, l'outil
+          récupère le nombre de visites et les pages vues mais également les sites référents, le navigateur utilisé ou
+          encore le système d'exploitation.</p>
       </div>
     </main>
     <footer class="footer">
@@ -121,7 +118,6 @@ $dap_current_env = dap_get_current_env();
     </footer>
     <script src="./assets/js/runtime.js"></script>
     <script src="./assets/js/app.js"></script>
-    <?php require_once './inc/tracker.php'; ?>
   </body>
 
 </html>
