@@ -1,5 +1,7 @@
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
+const { DefinePlugin } = require('webpack');
+const dotenv = require('dotenv').config();
 const paths = require('./paths');
 
 module.exports = {
@@ -102,5 +104,17 @@ module.exports = {
         { from: paths.src.images, to: 'images', noErrorOnMissing: true },
       ],
     }),
+    new DefinePlugin({
+      'process.env': JSON.stringify(dotenv.parsed),
+      'process.env.ACKEE_DOMAIN': JSON.stringify(process.env.ACKEE_DOMAIN),
+      'process.env.ACKEE_SITE_ID': JSON.stringify(process.env.ACKEE_SITE_ID),
+    }),
   ],
+  resolve: {
+    fallback: {
+      fs: false,
+      path: false,
+      os: false,
+    },
+  },
 };
