@@ -113,7 +113,6 @@ $dap_current_env = dap_get_current_env();
     </footer>
     <script src="./assets/js/runtime.js"></script>
     <script src="./assets/js/app.js"></script>
-    <?php require_once './inc/tracker.php'; ?>
   </body>
 
 </html>

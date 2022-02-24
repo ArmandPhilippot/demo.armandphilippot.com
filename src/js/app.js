@@ -5,6 +5,7 @@ import {
   currentLocale,
   supportedLanguages,
 } from './i18n/i18n';
+import { createAckeeInstance, setAckeeRecord } from './utilities/ackee';
 import {
   hideToBottom,
   hideToLeft,
@@ -360,9 +361,12 @@ function setAppLocale() {
 }
 
 /**
- * Initialize the website with the projects list.
+ * Initialize the website with the projects list and Ackee.
  */
 function init() {
+  const ackee = createAckeeInstance();
+
+  setAckeeRecord(ackee);
   setAppLocale();
   translateHTMLContent();
   replaceLegalNoticeLink();

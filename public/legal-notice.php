@@ -91,16 +91,12 @@ $dap_current_env = dap_get_current_env();
           <a href="license.php">MIT license</a>.
         </p>
         <h3>Statistics and audience metrics</h3>
-        <p>In order to adapt the site to visitor requests, the number of visits, the number of page views as well as the
-          activity of visitors to the site and their frequency of return are measured.</p>
-        <p>This site uses the Matomo statistics tool. The latter generates a cookie with a unique identifier, the
-          retention period of which is limited to 13 months. It is configured to hide the last 6 characters of your IP
-          address. Your browsing on the site is thus anonymized and the publisher can therefore under no circumstances
-          be traced back to a natural person by this means.</p>
-        <p>The Matomo statistics tool is one of the only tools validated by the French CNIL that does not require a
-          consent request.</p>
-        <iframe title="Matomo opt out" style="border: 0; height: 200px; width: 600px;"
-          src="https://demo.armandphilippot.com/matomo/matomo-proxy.php?module=CoreAdminHome&action=optOut&language=en&backgroundColor=f3f7fc&fontColor=0f1b29&fontSize=1rem&fontFamily="></iframe>
+        <p>To obtain information on visitor behavior, the site uses Ackee. It is a privacy-friendly analysis software.
+          You can learn more about how it works and the data collected by going to the <a
+            href="https://docs.ackee.electerious.com/#/docs/Anonymization">Ackee website</a>.</p>
+        <p>This site uses the detailed mode in order to more easily adapt the site to its visitors. Thus, the tool
+          recovers the number of visits and the pages viewed but also the referring sites, the browser used or the
+          operating system.</p>
       </div>
     </main>
     <footer class="footer">
@@ -121,7 +117,6 @@ $dap_current_env = dap_get_current_env();
     </footer>
     <script src="./assets/js/runtime.js"></script>
     <script src="./assets/js/app.js"></script>
-    <?php require_once './inc/tracker.php'; ?>
   </body>
 
 </html>
