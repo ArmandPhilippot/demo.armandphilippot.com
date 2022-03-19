@@ -1,13 +1,14 @@
 #!/usr/bin/env bash
 #
 # Build
-# Build all Angular & React projects.
+# Build all Angular, React & Vue projects.
 
 ###############################################################################
 # 1.0. Config
 ###############################################################################
 _ANGULAR_PROJECTS="projects/angular-small-apps"
 _REACT_PROJECTS="projects/react-small-apps"
+_VUE_PROJECTS="projects/vue-small-apps"
 
 ###############################################################################
 # 2.0. Helpers
@@ -115,7 +116,38 @@ setup_react_projects() {
 }
 
 ###############################################################################
-# 5.0. Main
+# 5.0. Vue
+###############################################################################
+
+install_vue_dependencies() {
+  if [ ! -d "./public/${_VUE_PROJECTS}" ]; then
+    error "Vue projects are missing."
+    printf "Exit.\n"
+    exit 1
+  fi
+
+  cd "./public/${_VUE_PROJECTS}" || exit
+  yarn
+  cd "$OLDPWD" || exit
+}
+
+build_vue_app() {
+  [ $# -ne 1 ] && error_unexpected
+
+  cd "./public/${_VUE_PROJECTS}" || exit
+  PUBLIC_URL="/${_VUE_PROJECTS}/apps/${1}/dist/" yarn --cwd "apps/${1}" run build
+  info "${1} built."
+  cd "$OLDPWD" || exit
+}
+
+setup_vue_projects() {
+  install_vue_dependencies
+  build_vue_app "typing"
+  success "Vue apps are ready."
+}
+
+###############################################################################
+# 6.0. Main
 ###############################################################################
 
 # Check if Yarn is installed.
@@ -130,11 +162,12 @@ is_yarn_installed() {
   fi
 }
 
-# Build Angular & React projects.
+# Build Angular, React & Vue projects.
 build_all_projects() {
   is_yarn_installed
   setup_angular_projects
   setup_react_projects
+  setup_vue_projects
   success "All projects have been built."
 }
 

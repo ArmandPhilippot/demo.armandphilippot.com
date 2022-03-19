@@ -220,6 +220,26 @@ const projects = [
     technologies: ['React', 'React router', 'Redux'],
   },
   {
+    id: 'typing',
+    name: 'Typing',
+    description: {
+      en: 'You can practice to type as quickly and accurately as possible a random list of words. Three dictionaries are available.\n\nLogin: demo\nPassword: demo',
+      fr: 'Vous pouvez vous entrainer à taper le plus rapidement une liste de mots générées alétatoirement. Trois dictionnaires sont disponibles.\n\nLogin : demo\nMot de passe : demo',
+    },
+    path: './projects/vue-small-apps/apps/typing/dist/',
+    repo: [
+      {
+        name: 'Github',
+        url: 'https://github.com/ArmandPhilippot/vue-small-apps/tree/main/apps/typing',
+      },
+      {
+        name: 'Gitlab',
+        url: 'https://gitlab.com/ArmandPhilippot/vue-small-apps/-/tree/main/apps/typing',
+      },
+    ],
+    technologies: ['Vue', 'Vue router'],
+  },
+  {
     id: 'users-list',
     name: 'Users list',
     description: {

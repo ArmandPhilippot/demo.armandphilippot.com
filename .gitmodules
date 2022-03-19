@@ -7,3 +7,6 @@ url = git@github.com:ArmandPhilippot/react-small-apps.git
 [submodule "public/projects/angular-small-apps"]
 path = public/projects/angular-small-apps
 url = git@github.com:ArmandPhilippot/angular-small-apps.git
+[submodule "public/projects/vue-small-apps"]
+	path = public/projects/vue-small-apps
+	url = git@github.com:ArmandPhilippot/vue-small-apps.git
